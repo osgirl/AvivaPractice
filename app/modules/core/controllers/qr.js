@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc object
- * @name core.Controllers.QrscannerController
- * @description QrscannerController
+ * @name core.Controllers.QrController
+ * @description QrController
  * @requires ng.$scope
 */
 angular
     .module('core')
-    .controller('QrscannerController', [
+    .controller('QrController', [
         '$scope',
         function($scope) {
 

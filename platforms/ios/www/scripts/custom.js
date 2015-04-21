@@ -70,6 +70,18 @@ angular
     .module('core')
     .controller('HomeController', ['$scope',
         function($scope) {
-
+        	console.log('i works');
         }
     ]);
+
+'use strict';
+
+angular
+    .module('core')
+    .controller('QrController', [
+        '$scope',
+        function($scope) {
+
+
+        }
+]);
