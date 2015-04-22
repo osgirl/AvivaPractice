@@ -37,6 +37,12 @@ angular
  *
 */
 $stateProvider
+    .state('menu', {
+        url: '/menu',
+        templateUrl: 'modules/core/views/menu.html',
+        controller: 'MenuController'
+    });
+$stateProvider
     .state('qr', {
         url: '/qr',
         templateUrl: 'modules/core/views/qr.html',

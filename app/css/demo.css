@@ -321,3 +321,14 @@ border-color: #fff;
     }
 
 }
+.login-button {
+  margin-bottom: 6px;
+  color: #F78F7D !important;
+  float: right;
+  border: 0px;
+}
+.login-form label {
+  border-color: #F78F7D !important;
+  margin-bottom: 8px;
+  border-width: 2px;
+}

@@ -1,18 +1,18 @@
 'use strict';
 
-describe('Controller: QrscannerController', function() {
+describe('Controller: QrController', function() {
 
     //Load the ui.router module
     beforeEach(module('ui.router'));
     //Load the module
     beforeEach(module('core'));
 
-    var QrscannerController,
+    var QrController,
         scope;
 
     beforeEach(inject(function($controller, $rootScope) {
         scope = $rootScope.$new();
-        QrscannerController = $controller('QrscannerController', {
+        QrController = $controller('QrController', {
         $scope: scope
         });
     }));

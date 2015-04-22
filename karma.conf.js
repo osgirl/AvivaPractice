@@ -26,6 +26,8 @@ module.exports = function(config) {
             'app/lib/angular-bootstrap/ui-bootstrap-tpls.js',
             'app/lib/angular-ui-utils/ui-utils.js',
             'app/lib/angular-ui-router/release/angular-ui-router.js',
+            'app/lib/ionic/release/js/ionic.js',
+            'app/lib/ionic/release/js/ionic-angular.js',
             <!-- endinjector -->
 
             'app/js/config.js',
