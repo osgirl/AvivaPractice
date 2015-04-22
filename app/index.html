@@ -14,6 +14,7 @@
 
     <!-- build:css styles/custom.css -->
         <!-- injector:css -->
+        <link rel="stylesheet" href="css/aviva.css">
         <link rel="stylesheet" href="css/customcordova.css">
         <link rel="stylesheet" href="css/demo.css">
         <!-- endinjector -->
@@ -21,14 +22,14 @@
     <script src="cordova.js"></script>
   </head>
 
-  <body>
+  <body ng-app="angularjsapp">
     <!-- =================== Navigation bar =================== -->
     <header class="navbar navbar-default navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand visible-xs" href="#">
-                        angularjsapp
+                        <img class="img-responsive" src='img/assets/Dentalink-Logo.png' alt='logo'/>
                     </a>
                 </div>
             </div>
@@ -37,13 +38,13 @@
 
     <div class="header-placeholder"></div>
     <div role="main">
-        <header class="bs-header text-center" id="overview">
+<!--         <header class="bs-header text-center" id="overview">
             <div class="container">
                 <h1 id="app-heading">
-                    AngularJs Cordova application
+                    
                 </h1>
             </div>
-        </header>
+        </header> -->
 
         <div class="container">
             <div class="row">
