@@ -47,22 +47,27 @@ ApplicationConfiguration.registerModule('core');
 
 'use strict';
 
-angular
-    .module('core')
-    .config(['$stateProvider',
-        '$urlRouterProvider',
-        function($stateProvider, $urlRouterProvider) {
+ angular
+ .module('core')
+ .config(['$stateProvider',
+    '$urlRouterProvider',
+    function($stateProvider, $urlRouterProvider) {
 
-            $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/');
 
-                        $stateProvider
-                .state('home', {
-                    url: '/',
-                    templateUrl: 'modules/core/views/home.html',
-                    controller: 'HomeController'
-                });
-        }
-    ]);
+                                $stateProvider
+            .state('qr', {
+            url: '/qr',
+            templateUrl: 'modules/core/views/qr.html',
+            controller: 'QrController'
+        }).
+        state('home', {
+            url: '/',
+            templateUrl: 'modules/core/views/home.html',
+            controller: 'HomeController'
+        });
+    }
+]);
 
 'use strict';
 
@@ -70,7 +75,9 @@ angular
     .module('core')
     .controller('HomeController', ['$scope',
         function($scope) {
-        	console.log('i works');
+        	$scope.login = function() {
+        		console.log('lets login');
+        	};
         }
     ]);
 
