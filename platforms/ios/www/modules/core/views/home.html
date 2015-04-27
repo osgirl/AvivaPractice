@@ -1,0 +1,17 @@
+<div class="page-header">
+    <h1 class="aviva-color" id="home-h1">Login</h1>
+</div>
+<!-- <p id="home-content">
+    You have successfully created an AngularJs application running within a cordova app !
+</p> -->
+<form ng-controller="HomeController">
+  <div class="form-group">
+    <label for="inputEmail1">Username</label>
+    <input type="text" class="form-control" id="inputEmail1" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="inputPassword1">Password</label>
+    <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
+  </div>
+  <button ng-click="home.login()" type="submit" class="btn btn-default aviva-color">Sign In</button>
+</form>
