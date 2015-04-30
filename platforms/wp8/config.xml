@@ -3,6 +3,9 @@
     <feature name="StatusBar">
         <param name="wp-package" value="StatusBar" />
     </feature>
+    <feature name="BarcodeScanner">
+        <param name="wp-package" value="BarcodeScanner" />
+    </feature>
     <name>Aviva</name>
     <description>
         A Cordova-based app for a dentist.

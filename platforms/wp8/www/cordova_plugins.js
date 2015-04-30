@@ -13,13 +13,21 @@ module.exports = [
         "clobbers": [
             "cloudSky.zBar"
         ]
+    },
+    {
+        "file": "plugins/com.phonegap.plugins.barcodescanner/www/barcodescanner.js",
+        "id": "com.phonegap.plugins.barcodescanner.BarcodeScanner",
+        "clobbers": [
+            "cordova.plugins.barcodeScanner"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "org.apache.cordova.statusbar": "0.1.10",
-    "org.cloudsky.cordovaplugins.zbar": "1.3.0"
+    "org.cloudsky.cordovaplugins.zbar": "1.3.0",
+    "com.phonegap.plugins.barcodescanner": "2.0.1"
 }
 // BOTTOM OF METADATA
 });
