@@ -14,11 +14,19 @@
                         }
                     ]
                 }
+            },
+            "Properties/WMAppManifest.xml": {
+                "parents": {
+                    "/Deployment/App/Capabilities": []
+                }
             }
         }
     },
     "installed_plugins": {
         "org.apache.cordova.statusbar": {
+            "PACKAGE_NAME": "{30de09c0-ea3d-11e4-83b2-77921213f80e}"
+        },
+        "org.cloudsky.cordovaplugins.zbar": {
             "PACKAGE_NAME": "{30de09c0-ea3d-11e4-83b2-77921213f80e}"
         }
     },

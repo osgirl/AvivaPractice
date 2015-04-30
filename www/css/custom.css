@@ -81,3 +81,8 @@ a {
     padding-top: 2px;
     color: #303030;
 }
+.update {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}

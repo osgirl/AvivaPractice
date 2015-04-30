@@ -220,4 +220,5 @@
     <ItemGroup>
         <Compile Include="Plugins\org.apache.cordova.statusbar\StatusBar.cs" />
     </ItemGroup>
+    <ItemGroup />
 </Project>

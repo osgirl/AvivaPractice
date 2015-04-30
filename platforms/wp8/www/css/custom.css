@@ -1,15 +1,17 @@
-.login-button {
+.ui-page-theme-a .ui-btn.login-button {
     margin-bottom: 6px;
-    color: #F78F7D !important;
+    color: #F78F1E !important;
     float: right;
     border: 0px;
     width: 150px !important;
-}
-.ui-page-theme-a .ui-btn {
-    background-color: #fff;
-}
-.ui-shadow {
     box-shadow: none !important;
+    background-color: transparent;
+}
+/*.ui-page-theme-a .ui-btn {
+    
+}*/
+.ui-shadow {
+    
 }
 .ui-page-theme-a  .ui-btn:focus {
     box-shadow: none;
@@ -18,7 +20,7 @@
     box-shadow: none;
 }
 .ui-page-theme-a .ui-body-inherit {
-    border-color: #F78F7D !important;
+    border-color: #F78F1E !important;
     margin-bottom: 8px;
     border-width: 1px;
     padding-left: 10px;
@@ -50,7 +52,7 @@ a {
     text-align: center;
     height: auto;
     border-top: 1px solid #ddd;
-    background-color: #F78F7D !important;
+    background-color: #F78F1E !important;
     color: #fff;
 }
 .treatment-divs {
@@ -62,9 +64,9 @@ a {
     margin-bottom: 10px;
 }
 .ui-page-theme-a .ui-checkbox-on::after {
-    background-color: #F78F7D;
-    border-color: #F78F7D;
-    text-shadow: 0px 1px 0px #F78F7D;
+    background-color: #F78F1E;
+    border-color: #F78F1E;
+    text-shadow: 0px 1px 0px #F78F1E;
 }
 .treatment-prices {
     right: 10px;
@@ -78,4 +80,9 @@ a {
     position: absolute;
     padding-top: 2px;
     color: #303030;
+}
+.update {
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }

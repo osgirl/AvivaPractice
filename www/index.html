@@ -41,10 +41,10 @@
                 <p class="event received">Device is Ready</p>
             </div>
         </div> -->
-        <div data-role="page" id="page-1">
+        <div data-role="page" id="homepage">
         	<div>
         		<div style="height: 55px">
-        			<a href="#page-2"><button class="login-button">Login</button></a>
+        			<a href="#menu"><button class="login-button">Login</button></a>
         		</div>
 
         		<input type="text" placeholder="Username">
@@ -53,10 +53,10 @@
         	</div>
         </div>
 
-        <div data-role="page" id="page-2">
+        <div data-role="page" id="menu">
         	<div>
         		<div style="height: 55px">
-        			<a href="#page-1"><button class="login-button">Log Out</button></a>
+        			<a href="#homepage"><button class="login-button">Log Out</button></a>
         		</div>
         		<div style="margin-top: 5%; text-align: center">
         			<h4 style="color: #585f69">Logged in as</h4>
@@ -64,7 +64,7 @@
         		</div>
         	</div>
         	<div class="footer">
-        		<a href="#read-qr"><button class="qr-button">Qr Reader</button></a>
+        		<a href="" onclick="scan()"><button class="qr-button">Qr Reader</button></a>
         	</div>
         </div>
 		
@@ -75,15 +75,15 @@
 				</div>
 			</div>
 			<div class="footer">
-        		<a href="#page-3"><button class="qr-button">Capture</button></a>
-        		<a href="#page-2"><button class="qr-button">Cancel</button></a>
+        		<a href="#patient-details"><button class="qr-button">Capture</button></a>
+        		<a href="#menu"><button class="qr-button">Cancel</button></a>
         	</div>
 		</div>
 
-		<div data-role="page" id="page-3">
+		<div data-role="page" id="patient-details">
 			<div class="header" style="text-align: center">
 				<h4 style="display: inline-block; width: auto;">Treatments</h4>
-				<a href=""><button class="login-button">Update</button></a>
+				<a href=""><button class="login-button update">Update</button></a>
 			</div>
 			<div class="treatment-divs" style="color: #303030">
 				<div style="display: inline-block"><img src="img/user.png" style="width: 50px; height: auto; padding-top: 10px;" alt=""></div>
@@ -102,7 +102,7 @@
 				
 			</div>
 			<div>
-				<a href="#page-4">
+				<a href="#teeth-numbers">
 					<button class="ui-btn ui-icon-carat-r ui-btn-icon-right">Teeth Numbers</button>
 				</a> <!-- ui-btn ui-icon-carat-r ui-btn-icon-right -->
 			</div>
@@ -117,9 +117,9 @@
 			</div>
 		</div>
 
-		<div data-role="page" id="page-4">
+		<div data-role="page" id="teeth-numbers">
 			<div>
-				<a href="#page-3"><button class="ui-btn ui-icon-carat-l ui-btn-icon-left">Back</button></a>
+				<a href="#patient-details"><button class="ui-btn ui-icon-carat-l ui-btn-icon-left">Back</button></a>
 			</div>
 			<div class="treatment-divs">
 				<fieldset data-role="controlgroup">
@@ -130,7 +130,7 @@
 					<label><input type="checkbox" name="1">Tooth 5</label>
 					<label><input type="checkbox" name="1">Tooth 6</label>
 				</fieldset>
-				<a href="#page-3"><button class="ui-btn">Choose</button></a>
+				<a href="#patient-details"><button class="ui-btn">Choose</button></a>
 			</div>
 		</div>
 
@@ -138,6 +138,19 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
         	app.initialize();
+        </script>
+        <script type="text/javascript">
+        function scan() {
+        	cloudSky.zBar.scan(
+	        	{camera: "back"},
+	        	function(success) {
+	        		alert("Scan Complete! Code is " + success);
+	        	},
+	        	function(failed) {
+	        		alert("Failed!");
+	        	}
+        	);
+        }
         </script>
     </body>
     </html>
