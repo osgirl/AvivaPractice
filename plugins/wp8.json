@@ -11,13 +11,22 @@
                         {
                             "xml": "<feature name=\"StatusBar\"><param name=\"wp-package\" value=\"StatusBar\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"wp-package\" value=\"BarcodeScanner\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
             },
             "Properties/WMAppManifest.xml": {
                 "parents": {
-                    "/Deployment/App/Capabilities": []
+                    "/Deployment/App/Capabilities": [
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_ISV_CAMERA\" />",
+                            "count": 1
+                        }
+                    ]
                 }
             }
         }
@@ -27,6 +36,9 @@
             "PACKAGE_NAME": "{30de09c0-ea3d-11e4-83b2-77921213f80e}"
         },
         "org.cloudsky.cordovaplugins.zbar": {
+            "PACKAGE_NAME": "{30de09c0-ea3d-11e4-83b2-77921213f80e}"
+        },
+        "com.phonegap.plugins.barcodescanner": {
             "PACKAGE_NAME": "{30de09c0-ea3d-11e4-83b2-77921213f80e}"
         }
     },
