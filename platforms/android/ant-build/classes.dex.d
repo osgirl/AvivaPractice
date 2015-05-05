@@ -14,5 +14,8 @@ c:\cordova\AvivaPractice\platforms\android\ant-build\classes\com\phonegap\hellow
 c:\cordova\AvivaPractice\platforms\android\ant-build\classes\com\phonegap\helloworld\R$xml.class \
 c:\cordova\AvivaPractice\platforms\android\ant-build\classes\com\phonegap\helloworld\R.class \
 c:\cordova\AvivaPractice\platforms\android\ant-build\classes\com\phonegap\plugins\barcodescanner\BarcodeScanner.class \
+c:\cordova\AvivaPractice\platforms\android\ant-build\classes\org\apache\cordova\camera\CameraLauncher.class \
+c:\cordova\AvivaPractice\platforms\android\ant-build\classes\org\apache\cordova\camera\ExifHelper.class \
+c:\cordova\AvivaPractice\platforms\android\ant-build\classes\org\apache\cordova\camera\FileHelper.class \
 c:\cordova\AvivaPractice\platforms\android\ant-build\dexedLibs\classes-b742d1fa3b955937ab971ada26554c3f.jar \
 c:\cordova\AvivaPractice\platforms\android\ant-build\dexedLibs\com.google.zxing.client.android.captureactivity-ab614020d72572de48a65dfe8fe6e5cd.jar \
