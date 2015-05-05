@@ -93,6 +93,7 @@ c:\cordova\AvivaPractice\platforms\android\assets\www\assets \
 c:\cordova\AvivaPractice\platforms\android\assets\www\cordova.js \
 c:\cordova\AvivaPractice\platforms\android\assets\www\cordova_plugins.js \
 c:\cordova\AvivaPractice\platforms\android\assets\www\css \
+c:\cordova\AvivaPractice\platforms\android\assets\www\fonts \
 c:\cordova\AvivaPractice\platforms\android\assets\www\icon.png \
 c:\cordova\AvivaPractice\platforms\android\assets\www\img \
 c:\cordova\AvivaPractice\platforms\android\assets\www\index.html \
@@ -338,6 +339,8 @@ c:\cordova\AvivaPractice\platforms\android\assets\www\assets\jquery-mobile\image
 c:\cordova\AvivaPractice\platforms\android\assets\www\assets\jquery-mobile\images\icons-svg\video-black.svg \
 c:\cordova\AvivaPractice\platforms\android\assets\www\assets\jquery-mobile\images\icons-svg\video-white.svg \
 c:\cordova\AvivaPractice\platforms\android\assets\www\css\custom.css \
+c:\cordova\AvivaPractice\platforms\android\assets\www\fonts\lato-light.ttf \
+c:\cordova\AvivaPractice\platforms\android\assets\www\fonts\lato.ttf \
 c:\cordova\AvivaPractice\platforms\android\assets\www\img\assets \
 c:\cordova\AvivaPractice\platforms\android\assets\www\img\loaders \
 c:\cordova\AvivaPractice\platforms\android\assets\www\img\logo.png \
@@ -352,8 +355,14 @@ c:\cordova\AvivaPractice\platforms\android\assets\www\modules\core\views \
 c:\cordova\AvivaPractice\platforms\android\assets\www\modules\core\views\home.html \
 c:\cordova\AvivaPractice\platforms\android\assets\www\modules\core\views\qr.html \
 c:\cordova\AvivaPractice\platforms\android\assets\www\plugins\com.phonegap.plugins.barcodescanner \
+c:\cordova\AvivaPractice\platforms\android\assets\www\plugins\org.apache.cordova.camera \
 c:\cordova\AvivaPractice\platforms\android\assets\www\plugins\com.phonegap.plugins.barcodescanner\www \
 c:\cordova\AvivaPractice\platforms\android\assets\www\plugins\com.phonegap.plugins.barcodescanner\www\barcodescanner.js \
+c:\cordova\AvivaPractice\platforms\android\assets\www\plugins\org.apache.cordova.camera\www \
+c:\cordova\AvivaPractice\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\Camera.js \
+c:\cordova\AvivaPractice\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraConstants.js \
+c:\cordova\AvivaPractice\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraPopoverHandle.js \
+c:\cordova\AvivaPractice\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraPopoverOptions.js \
 c:\cordova\AvivaPractice\platforms\android\assets\www\res\icon \
 c:\cordova\AvivaPractice\platforms\android\assets\www\res\screen \
 c:\cordova\AvivaPractice\platforms\android\assets\www\res\icon\android \

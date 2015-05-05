@@ -43,96 +43,134 @@
         </div> -->
         <div data-role="page" id="homepage">
         	<div>
-        		<div style="height: 55px">
-        			<a href="#menu"><button class="login-button">Login</button></a>
+        		<div class="header">
+        			<span class="welcome">Welcome</span>
         		</div>
-
-        		<input type="text" placeholder="Username">
-        		<input type="password" placeholder="Password">
-
+        		<div style="margin-top: 5%; text-align: center; position: relative;">
+        			<div class="user-card login-card">
+        				<h2 class="card-heading">Sign In</h2>
+        				<div style="padding: 0 6px;">
+        					<p class="login-labels">Username</p>
+        					<div class="input-field">
+        						<input class="input validate" type="text">
+        					</div>
+        					<p class="login-labels">Password</p>
+        					<div class="input-field">
+        						<input class="input validate" type="password">
+        					</div>
+        				</div>
+        				<h4 class="card-footer">Forgot your password?</h4>
+        			</div>
+        		</div>
+        		<div class="footer">
+        			<a href="#menu"><button class="qr-button">Sign In</button></a>
+        		</div>
         	</div>
         </div>
 
         <div data-role="page" id="menu">
         	<div>
-        		<div style="height: 55px">
+        		<div class="header">
+        			<span class="welcome">Welcome</span>
         			<a href="#homepage"><button class="login-button">Log Out</button></a>
         		</div>
-        		<div style="margin-top: 5%; text-align: center">
-        			<h4 style="color: #585f69">Logged in as</h4>
-        			<h2 style="color: #303030">Nauroz Ahmad</h2>
+        		<div style="margin-top: 5%; text-align: center; position: relative;">
+        			<div class="user-card">
+        				<h4 style="color: #585f69; padding-top: 12px;">Logged in as</h4>
+        				<img src="img/user.png" style="width: 100px; border-radius: 40px; height: auto; padding-top: 10px;" alt="">
+        				<h2 style="color: #F78F1E; padding-bottom: 14px;">Daniel Lewis</h2>
+        			</div>
         		</div>
         	</div>
         	<div class="footer">
-        		<a href="" onclick="scan()"><button class="qr-button">Qr Reader</button></a>
+        		<a href="#read-qr"><button class="qr-button">Scan QR Code</button></a>
         	</div>
         </div>
-		
-		<div data-role="page" id="read-qr">
-			<div style="margin-top: 40px;">
-				<div style="width: 200px; height: auto; margin: 0 auto;">
-					<img style="width: 200px; height: auto; margin: 0 auto;" src="img/qr-sample.jpg" alt="">
-				</div>
-			</div>
-			<div class="footer">
-        		<a href="#patient-details"><button class="qr-button">Capture</button></a>
+
+        <div data-role="page" id="read-qr">
+        	<span style="text-align: center;">Monitoring Qr Code...</span>
+        	<div style="margin-top: 40px;">
+        		<div style="width: 200px; height: 200px; margin: 0 auto;">
+
+        		</div>
+        	</div>
+        	<div class="footer">
         		<a href="#menu"><button class="qr-button">Cancel</button></a>
         	</div>
-		</div>
+        </div>
 
-		<div data-role="page" id="patient-details">
-			<div class="header" style="text-align: center">
-				<h4 style="display: inline-block; width: auto;">Treatments</h4>
-				<a href=""><button class="login-button update">Update</button></a>
-			</div>
-			<div class="treatment-divs" style="color: #303030">
-				<div style="display: inline-block"><img src="img/user.png" style="width: 50px; height: auto; padding-top: 10px;" alt=""></div>
-				<div style="display: inline-block; padding-left: 10px;">
-					<h2 style="margin-bottom: 0; margin-top: 10px;">Khan Sahab</h2>
-					<p style="margin-top: 5px; margin-bottom: 10px;" >Google Inc.</p>
-				</div>
-			</div>
-			<div class="treatment-divs">
-				<h2 style="color: #303030">Treatment Plan 1</h2>
-				<fieldset data-role="controlgroup">
-					<label><input type="checkbox" name="1">Teeth Alignment <span class="treatment-prices">$30</span></label>
-					<label><input type="checkbox" name="1">Bridging <span class="treatment-prices">$100</span></label>
-					<label><input type="checkbox" name="1">Dental Checkup <span class="treatment-prices">$25</span></label>
-				</fieldset>
-				
-			</div>
-			<div>
-				<a href="#teeth-numbers">
-					<button class="ui-btn ui-icon-carat-r ui-btn-icon-right">Teeth Numbers</button>
-				</a> <!-- ui-btn ui-icon-carat-r ui-btn-icon-right -->
-			</div>
-			<div class="treatment-divs">
-				<h4>Treatment Notes</h4>
-				<p style="color: #585f69">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
-		</div>
+        <div data-role="page" id="patient-details">
+        	<div class="header" style="text-align: center">
+        		<span class="welcome">Treatment Update</span>
+        		<a href=""><button class="login-button">Update</button></a>
+        	</div>
+        	<div style="position: relative">
+        		<div class="user-card plan-cards" style="color: #303030">
+        			<div style="display: inline-block"><img src="img/user.png" style="width: 50px; height: auto; padding-top: 10px;" alt=""></div>
+        			<div style="display: inline-block; padding-left: 10px;">
+        				<h3 style="margin-bottom: 0; margin-top: 10px;">Daniel Lewis</h3>
+        				<p style="margin-top: 5px; margin-bottom: 10px;" >danlewis@aviva.com</p>
+        			</div>
+        			<p style="border-top: 1px solid #b7b7b7; margin-top: 0; padding-top: 10px; color: #585F69;">
+        				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        			</p>
+        		</div>
+        		<div class="user-card plan-cards">
+        			<h3 style="color: #303030; margin-top: 5px; margin-bottom: 5px;">Treatment Plan</h3>
+        			<div class="plan-options">
+        				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Teeth Alignment</span> <span class="plan-price">$30</span>
+        			</div>
+        			<div class="plan-options">
+        				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Bridging</span> <span class="plan-price">$100</span>
+        			</div>
+        			<div class="plan-options">
+        				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Dental Checkup</span> <span class="plan-price">$25</span>
+        			</div>
 
-		<div data-role="page" id="teeth-numbers">
-			<div>
-				<a href="#patient-details"><button class="ui-btn ui-icon-carat-l ui-btn-icon-left">Back</button></a>
-			</div>
-			<div class="treatment-divs">
-				<fieldset data-role="controlgroup">
-					<label><input type="checkbox" name="1">Tooth 1</label>
-					<label><input type="checkbox" name="1">Tooth 2</label>
-					<label><input type="checkbox" name="1">Tooth 3</label>
-					<label><input type="checkbox" name="1">Tooth 4</label>
-					<label><input type="checkbox" name="1">Tooth 5</label>
-					<label><input type="checkbox" name="1">Tooth 6</label>
-				</fieldset>
-				<a href="#patient-details"><button class="ui-btn">Choose</button></a>
-			</div>
-		</div>
+        		</div>
+        		<div class="user-card plan-cards">
+        			<a href="#teeth-numbers">
+        				<button style="border: none; text-align: left !important; font-weight: normal; background-color: transparent; padding: 2px; margin: 0;" class="ui-btn ui-icon-carat-r ui-btn-icon-right;">Teeth Numbers</button>
+        			</a>
+        		</div>
+        		<div class="user-card plan-cards">
+        			<h3 style="color: #303030; margin-top: 5px; margin-bottom: 5px;">Treatment Notes</h3>
+        			<textarea style="border-bottom: 1px solid #b7b7b7"></textarea>
+        		</div>
+        	</div>
+        </div>
+
+        <div data-role="page" id="teeth-numbers">
+        	<div class="header" style="text-align: center">
+        		<span class="welcome">Teeth Numbers</span>
+        	</div>
+        	<div class="user-card plan-cards">
+        		<h3 style="color: #303030; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #b7b7b7; padding: 10px">Teeth Numbers</h3>
+        		<div class="plan-options">
+        			<input type="checkbox" name="1" data-role="none"><span class="plan-name">Tooth A2</span>
+        		</div>
+        		<div class="plan-options">
+        			<input type="checkbox" name="1" data-role="none"><span class="plan-name">Tooth B3</span>
+        		</div>
+        		<div class="plan-options">
+        			<input type="checkbox" name="1" data-role="none"><span class="plan-name">Tooth C2</span>
+        		</div>
+        		<div class="plan-options">
+        			<input type="checkbox" name="1" data-role="none"><span class="plan-name">Tooth E2</span>
+        		</div>
+        		<div class="plan-options">
+        			<input type="checkbox" name="1" data-role="none"><span class="plan-name">Tooth E4</span>
+        		</div>
+        		<div class="plan-options">
+        			<input type="checkbox" name="1" data-role="none"><span class="plan-name">Tooth A1</span>
+        		</div>
+        	</div>
+        </div>
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
@@ -140,20 +178,29 @@
         	app.initialize();
         </script>
         <script type="text/javascript">
-        function scan() {
-        	alert("Scan procedure initiating...");
-        	cordova.plugins.barcodeScanner.scan(
-        	      function (result) {
-        	          alert("We got a barcode\n" +
-        	                "Result: " + result.text + "\n" +
-        	                "Format: " + result.format + "\n" +
-        	                "Cancelled: " + result.cancelled);
-        	      }, 
-        	      function (error) {
-        	          alert("Scanning failed: " + error);
-        	      }
-        	   );
-        }
+        	document.addEventListener("deviceready",onDeviceReady,false);
+
+            // device APIs are available
+            //
+            function onDeviceReady() {
+            	pictureSource=navigator.camera.PictureSourceType;
+            	destinationType=navigator.camera.DestinationType;
+            }
+
+            function scan() {
+            	alert("Visual analysis initiating...");
+            	navigator.camera.getPicure(onSuccess, onFail, {
+            		quality: 50,
+            		destinationType: destinationType.DATA_URL
+            	});
+            	function onSuccess(imageData) {
+            		var image = document.getElementById('myImage');
+            		image.src = "data:image/jpeg;base64," + imageData;
+            	}
+            	function onFail(message) {
+            		alert('Failed because: ' + message);
+            	}
+            }
         </script>
     </body>
     </html>
