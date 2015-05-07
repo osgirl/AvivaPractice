@@ -85,7 +85,7 @@
         		</div>
         	</div>
         	<div class="footer">
-        		<a href="#read-qr"><button class="qr-button">Scan QR Code</button></a>
+        		<a  onclick="scan()" href="#read-qr"><button class="qr-button">Scan QR Code</button></a>
         	</div>
         </div>
 
@@ -96,7 +96,7 @@
         		Monitoring QR Code...
         		<a href="#patient-details"><img id="qr-info" src="img/qrinfo.png"></p></a>
         	<div style="margin-top: 40px;">
-        		<a href="#" onclick="scan()">Start scan.</a>
+        		<!-- <a href="#">Start scan.</a> -->
         		<img id="qr-square" src="img/qr-square.png">
         		
         	</div>
@@ -237,7 +237,9 @@
                 var options =   {   quality: 50,
                                     destinationType: Camera.DestinationType.DATA_URL,
                                     sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Album
-                                    encodingType: 0     // 0=JPG 1=PNG
+                                    encodingType: 0,     // 0=JPG 1=PNG
+                                    targetWidth: 800,
+                                    targetHeight: 500
                                 };
 
                 navigator.camera.getPicture(
