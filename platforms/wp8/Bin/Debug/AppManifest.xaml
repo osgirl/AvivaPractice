@@ -14,6 +14,5 @@
 <Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="com.phonegap.helloworld" EntryPointType="com.phonegap.helloworld.App" RuntimeVersion="4.7.50308.0">
   <Deployment.Parts>
     <AssemblyPart x:Name="com.phonegap.helloworld" Source="com.phonegap.helloworld.dll" />
-    <AssemblyPart x:Name="zxing.wp8.0" Source="zxing.wp8.0.dll" />
   </Deployment.Parts>
 </Deployment>

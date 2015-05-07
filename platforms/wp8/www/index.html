@@ -41,6 +41,7 @@
                 <p class="event received">Device is Ready</p>
             </div>
         </div> -->
+        <!--=========================================================== Homepage ==============================-->
         <div data-role="page" id="homepage">
         	<div>
         		<div class="header">
@@ -68,6 +69,7 @@
         	</div>
         </div>
 
+        <!--=========================================================== Menu ==============================-->
         <div data-role="page" id="menu">
         	<div>
         		<div class="header">
@@ -87,70 +89,93 @@
         	</div>
         </div>
 
-        <div data-role="page" id="read-qr">
-        	<span style="text-align: center;">Monitoring Qr Code...</span>
-        	<div style="margin-top: 40px;">
-        		<div style="width: 200px; height: 200px; margin: 0 auto;">
+        <!--=========================================================== Read QR ==============================-->
 
-        		</div>
+        <div data-role="page" id="read-qr">
+        	<p style="text-align: center; padding-left: 30px;">
+        		Monitoring QR Code...
+        		<a href="#patient-details"><img id="qr-info" src="img/qrinfo.png"></p></a>
+        	<div style="margin-top: 40px;">
+        		<a href="#" onclick="scan()">Start scan.</a>
+        		<img id="qr-square" src="img/qr-square.png">
+        		
         	</div>
         	<div class="footer">
         		<a href="#menu"><button class="qr-button">Cancel</button></a>
         	</div>
         </div>
 
+        <!--=========================================================== Patient Details ==============================-->
+
         <div data-role="page" id="patient-details">
         	<div class="header" style="text-align: center">
-        		<span class="welcome">Treatments</span>
+        		<span class="welcome">
+        			<a href="#menu">
+        				<img class="back-arrow" src="img/action_back.png">
+        			</a>
+        			Treatment Update
+        		</span>
         		<a href=""><button class="login-button">Update</button></a>
         	</div>
         	<div style="position: relative">
         		<div class="user-card plan-cards" style="color: #303030">
-        			<div style="display: inline-block"><img src="img/user.png" style="width: 50px; height: auto; padding-top: 10px;" alt=""></div>
-        			<div style="display: inline-block; padding-left: 10px;">
-        				<h3 style="margin-bottom: 0; margin-top: 10px;">Daniel Lewis</h3>
-        				<p style="margin-top: 5px; margin-bottom: 10px;" >danlewis@aviva.com</p>
+        			<div style="height: 70px; width: 100%; display: block">
+        				<div style="display: inline-block; float:left"><img src="img/user.png" style="width: 50px; height: auto; padding-top: 10px;" alt=""></div>
+        				<div style="display: inline-block; padding-left: 10px; float:left;">
+        					<h3 style="margin-bottom: 0; margin-top: 10px;">Daniel Lewis</h3>
+        					<p style="margin-top: 5px; margin-bottom: 10px; font-size: 14px; color: #585F69;" >danlewis@aviva.com</p>
+        				</div>
         			</div>
-        			<p style="border-top: 1px solid #b7b7b7; margin-top: 0; padding-top: 10px; color: #585F69;">
+        			<p style="border-top: 1px solid #b7b7b7; margin-top: 0; padding-top: 10px; color: #585F69; font-size: 14px;">
         				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        				quis nostrud exercitation ullamco laboris nisi ut.
         			</p>
         		</div>
         		<div class="user-card plan-cards">
-        			<h3 style="color: #303030; margin-top: 5px; margin-bottom: 5px;">Treatment Plan</h3>
+        			<h3 style="color: #303030; margin-top: 0px; margin-bottom: 5px;">Treatment Plan</h3>
         			<div class="plan-options">
-        				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Teeth Alignment</span> <span class="plan-price">$30</span>
+        				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Teeth Alignment</span> <span class="plan-price">£20</span>
         			</div>
         			<div class="plan-options">
-        				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Bridging</span> <span class="plan-price">$100</span>
+        				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Bridging</span> <span class="plan-price">£15</span>
         			</div>
         			<div class="plan-options">
-        				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Dental Checkup</span> <span class="plan-price">$25</span>
+        				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Root Canal Surgery</span> <span class="plan-price">£10</span>
+        			</div>
+        			<div class="plan-options">
+        				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Fillings/Crowning</span> <span class="plan-price">£9.3</span>
         			</div>
 
         		</div>
         		<div class="user-card plan-cards">
         			<a href="#teeth-numbers">
-        				<button style="border: none; text-align: left !important; font-weight: normal; background-color: transparent; padding: 2px; margin: 0;" class="ui-btn ui-icon-carat-r ui-btn-icon-right;">Teeth Numbers</button>
+        				<h3 id="teeth-numbers-link">
+        					Teeth Numbers
+        					<img id="qr-info" src="img/right_chevron.png">
+        				</h3>
         			</a>
         		</div>
         		<div class="user-card plan-cards">
         			<h3 style="color: #303030; margin-top: 5px; margin-bottom: 5px;">Treatment Notes</h3>
-        			<textarea style="border-bottom: 1px solid #b7b7b7"></textarea>
+        			<textarea id="notes" placeholder="Make notes here"></textarea>
         		</div>
         	</div>
         </div>
 
+        <!--=========================================================== Teeth Numbers ==============================-->
+
         <div data-role="page" id="teeth-numbers">
         	<div class="header" style="text-align: center">
-        		<span class="welcome">Teeth Numbers</span>
+        		<span class="welcome">
+        			<a href="#patient-details">
+        				<img class="back-arrow" src="img/action_back.png">
+        			</a>
+        			Teeth Numbers
+        		</span>
         	</div>
         	<div class="user-card plan-cards">
-        		<h3 style="color: #303030; margin-top: 5px; margin-bottom: 5px; border-bottom: 1px solid #b7b7b7; padding: 10px">Teeth Numbers</h3>
+        		<h3 id="teeth-numbers-heading">Teeth Numbers</h3>
         		<div class="plan-options">
         			<input type="checkbox" name="1" data-role="none"><span class="plan-name">Tooth A2</span>
         		</div>
@@ -178,28 +203,52 @@
         	app.initialize();
         </script>
         <script type="text/javascript">
-        	document.addEventListener("deviceready",onDeviceReady,false);
 
-            // device APIs are available
-            //
-            function onDeviceReady() {
-            	pictureSource=navigator.camera.PictureSourceType;
-            	destinationType=navigator.camera.DestinationType;
-            }
+            /*this.changePicture = function(event) {
+              event.preventDefault();
+              alert("Visual scan initiating...");
+              if (!navigator.camera) {
+                  alert("Camera API not supported", "Error");
+                  return;
+              }
+              var options =   {   quality: 50,
+                                  destinationType: Camera.DestinationType.DATA_URL,
+                                  sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Album
+                                  encodingType: 0     // 0=JPG 1=PNG
+                              };
 
+              navigator.camera.getPicture(
+                  function(imgData) {
+                      $('.media-object', this.$el).attr('src', "data:image/jpeg;base64,"+imgData);
+                  },
+                  function() {
+                      alert('Error taking picture', 'Error');
+                  },
+                  options);
+
+              return false;
+            };*/
             function scan() {
-            	alert("Visual analysis initiating...");
-            	navigator.camera.getPicure(onSuccess, onFail, {
-            		quality: 50,
-            		destinationType: destinationType.DATA_URL
-            	});
-            	function onSuccess(imageData) {
-            		var image = document.getElementById('myImage');
-            		image.src = "data:image/jpeg;base64," + imageData;
-            	}
-            	function onFail(message) {
-            		alert('Failed because: ' + message);
-            	}
+                alert('Initiating Scan Procedure!')
+                if (!navigator.camera) {
+                    alert("Camera API not supported", "Error");
+                    return;
+                }
+                var options =   {   quality: 50,
+                                    destinationType: Camera.DestinationType.DATA_URL,
+                                    sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Album
+                                    encodingType: 0     // 0=JPG 1=PNG
+                                };
+
+                navigator.camera.getPicture(
+                    function(imgData) {
+                        $('#qr-square').attr('src', "data:image/jpeg;base64,"+imgData);
+                    },
+                    function() {
+                        alert('Error taking picture', 'Error');
+                    },
+                    options);
+
             }
         </script>
     </body>

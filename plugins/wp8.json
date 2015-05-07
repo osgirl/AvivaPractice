@@ -13,10 +13,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"wp-package\" value=\"BarcodeScanner\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Camera\"><param name=\"wp-package\" value=\"Camera\" /></feature>",
                             "count": 1
                         }
@@ -28,7 +24,7 @@
                     "/Deployment/App/Capabilities": [
                         {
                             "xml": "<Capability Name=\"ID_CAP_ISV_CAMERA\" />",
-                            "count": 2
+                            "count": 1
                         },
                         {
                             "xml": "<Capability Name=\"ID_CAP_MEDIALIB_PHOTO\" />",
@@ -41,12 +37,6 @@
     },
     "installed_plugins": {
         "org.apache.cordova.statusbar": {
-            "PACKAGE_NAME": "{30de09c0-ea3d-11e4-83b2-77921213f80e}"
-        },
-        "org.cloudsky.cordovaplugins.zbar": {
-            "PACKAGE_NAME": "{30de09c0-ea3d-11e4-83b2-77921213f80e}"
-        },
-        "com.phonegap.plugins.barcodescanner": {
             "PACKAGE_NAME": "{30de09c0-ea3d-11e4-83b2-77921213f80e}"
         },
         "org.apache.cordova.camera": {

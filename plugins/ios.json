@@ -21,10 +21,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"ios-package\" value=\"CDVBarcodeScanner\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
                             "count": 1
                         },
@@ -37,36 +33,16 @@
             },
             "framework": {
                 "parents": {
-                    "libiconv.dylib": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ],
-                    "AVFoundation.framework": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ],
+                    "libiconv.dylib": [],
+                    "AVFoundation.framework": [],
                     "AssetsLibrary.framework": [
                         {
                             "xml": "false",
-                            "count": 2
-                        }
-                    ],
-                    "CoreVideo.framework": [
-                        {
-                            "xml": "false",
                             "count": 1
                         }
                     ],
-                    "QuartzCore.framework": [
-                        {
-                            "xml": "false",
-                            "count": 1
-                        }
-                    ],
+                    "CoreVideo.framework": [],
+                    "QuartzCore.framework": [],
                     "ImageIO.framework": [
                         {
                             "xml": "true",
@@ -107,9 +83,6 @@
     },
     "installed_plugins": {
         "org.apache.cordova.statusbar": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "com.phonegap.plugins.barcodescanner": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "org.apache.cordova.camera": {

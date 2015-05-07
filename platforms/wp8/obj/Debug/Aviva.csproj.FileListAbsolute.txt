@@ -29,6 +29,3 @@ c:\cordova\AvivaPractice\platforms\wp8\obj\Debug\com.phonegap.helloworld.g.resou
 c:\cordova\AvivaPractice\platforms\wp8\obj\Debug\com.phonegap.helloworld.dll
 c:\cordova\AvivaPractice\platforms\wp8\obj\Debug\com.phonegap.helloworld.pdb
 c:\cordova\AvivaPractice\platforms\wp8\obj\Debug\XapCacheFile.xml
-c:\cordova\AvivaPractice\platforms\wp8\Bin\Debug\zxing.wp8.0.dll
-c:\cordova\AvivaPractice\platforms\wp8\obj\Debug\Aviva.csprojResolveAssemblyReference.cache
-c:\cordova\AvivaPractice\platforms\wp8\obj\Debug\Plugins\com.phonegap.plugins.barcodescanner\BarcodeScannerUI.g.cs
