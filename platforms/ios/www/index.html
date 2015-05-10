@@ -85,7 +85,7 @@
         		</div>
         	</div>
         	<div class="footer">
-        		<a  onclick="scan()" href="#read-qr"><button class="qr-button">Scan QR Code</button></a>
+        		<a  onclick="scan()" href="#patient-details"><button class="qr-button">Scan QR Code</button></a>
         	</div>
         </div>
 
@@ -229,7 +229,6 @@
               return false;
             };*/
             function scan() {
-                alert('Initiating Scan Procedure!')
                 if (!navigator.camera) {
                     alert("Camera API not supported", "Error");
                     return;
