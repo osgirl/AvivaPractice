@@ -98,7 +98,7 @@
         	<div style="margin-top: 40px;">
         		<!-- <a href="#">Start scan.</a> -->
         		<img id="qr-square" src="img/qr-square.png">
-        		
+
         	</div>
         	<div class="footer">
         		<a href="#menu"><button class="qr-button">Cancel</button></a>
@@ -127,39 +127,37 @@
         				</div>
         			</div>
         			<p style="border-top: 1px solid #b7b7b7; margin-top: 0; padding-top: 10px; color: #585F69; font-size: 14px;">
-        				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        				quis nostrud exercitation ullamco laboris nisi ut.
+								The following treatments have been approved by Aviva for patient <b>John Smith</b>. Please select the treatments that have been carried out to send off an invoice to Aviva.
         			</p>
         		</div>
         		<div class="user-card plan-cards">
         			<h3 style="color: #303030; margin-top: 0px; margin-bottom: 5px;">Treatment Plan</h3>
         			<div class="plan-options">
-        				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Teeth Alignment</span> <span class="plan-price">£20</span>
+        				<input type="checkbox" name="1" data-role="none"><span class="plan-name">New Patient Examination  </span> <span class="plan-price">£250</span>
         			</div>
         			<div class="plan-options">
-        				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Bridging</span> <span class="plan-price">£15</span>
+        				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Panoral X-Ray</span> <span class="plan-price">£90</span>
         			</div>
         			<div class="plan-options">
-        				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Root Canal Surgery</span> <span class="plan-price">£10</span>
+        				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Hygiene</span> <span class="plan-price">£85</span>
         			</div>
-        			<div class="plan-options">
+        			<!-- <div class="plan-options">
         				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Fillings/Crowning</span> <span class="plan-price">£9.3</span>
-        			</div>
+        			</div> -->
 
         		</div>
-        		<div class="user-card plan-cards">
+        		<!-- <div class="user-card plan-cards">
         			<a href="#teeth-numbers">
         				<h3 id="teeth-numbers-link">
         					Teeth Numbers
         					<img id="qr-info" src="img/right_chevron.png">
         				</h3>
         			</a>
-        		</div>
-        		<div class="user-card plan-cards">
+        		</div> -->
+        		<!-- <div class="user-card plan-cards">
         			<h3 style="color: #303030; margin-top: 5px; margin-bottom: 5px;">Treatment Notes</h3>
         			<textarea id="notes" placeholder="Make notes here"></textarea>
-        		</div>
+        		</div> -->
         	</div>
         </div>
 
@@ -244,6 +242,7 @@
                 navigator.camera.getPicture(
                     function(imgData) {
                         $('#qr-square').attr('src', "data:image/jpeg;base64,"+imgData);
+												window.location = ''
                     },
                     function() {
                         alert('Error taking picture', 'Error');
