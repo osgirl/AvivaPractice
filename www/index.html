@@ -177,22 +177,22 @@
         	<div class="user-card plan-cards">
         		<h3 id="teeth-numbers-heading">Teeth Numbers</h3>
         		<div class="plan-options">
-        			<input type="checkbox" name="1" data-role="none"><span class="plan-name">Tooth A2</span>
+        			<input type="checkbox" name="teeth-check" onclick="getTeeth()" data-role="none"><span class="plan-name">Tooth A2</span>
         		</div>
         		<div class="plan-options">
-        			<input type="checkbox" name="1" data-role="none"><span class="plan-name">Tooth B3</span>
+        			<input type="checkbox" name="teeth-check" onclick="getTeeth()" data-role="none"><span class="plan-name">Tooth B3</span>
         		</div>
         		<div class="plan-options">
-        			<input type="checkbox" name="1" data-role="none"><span class="plan-name">Tooth C2</span>
+        			<input type="checkbox" name="teeth-check" onclick="getTeeth()" data-role="none"><span class="plan-name">Tooth C2</span>
         		</div>
         		<div class="plan-options">
-        			<input type="checkbox" name="1" data-role="none"><span class="plan-name">Tooth E2</span>
+        			<input type="checkbox" name="teeth-check" onclick="getTeeth()" data-role="none"><span class="plan-name">Tooth E2</span>
         		</div>
         		<div class="plan-options">
-        			<input type="checkbox" name="1" data-role="none"><span class="plan-name">Tooth E4</span>
+        			<input type="checkbox" name="teeth-check" onclick="getTeeth()" data-role="none"><span class="plan-name">Tooth E4</span>
         		</div>
         		<div class="plan-options">
-        			<input type="checkbox" name="1" data-role="none"><span class="plan-name">Tooth A1</span>
+        			<input type="checkbox" name="teeth-check" onclick="getTeeth()" data-role="none"><span class="plan-name">Tooth A1</span>
         		</div>
         	</div>
         </div>
@@ -204,30 +204,10 @@
         </script>
         <script type="text/javascript">
 
-            /*this.changePicture = function(event) {
-              event.preventDefault();
-              alert("Visual scan initiating...");
-              if (!navigator.camera) {
-                  alert("Camera API not supported", "Error");
-                  return;
-              }
-              var options =   {   quality: 50,
-                                  destinationType: Camera.DestinationType.DATA_URL,
-                                  sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Album
-                                  encodingType: 0     // 0=JPG 1=PNG
-                              };
+            function getTeeth() {
 
-              navigator.camera.getPicture(
-                  function(imgData) {
-                      $('.media-object', this.$el).attr('src', "data:image/jpeg;base64,"+imgData);
-                  },
-                  function() {
-                      alert('Error taking picture', 'Error');
-                  },
-                  options);
+            }
 
-              return false;
-            };*/
             function scan() {
                 if (!navigator.camera) {
                     alert("Camera API not supported", "Error");
