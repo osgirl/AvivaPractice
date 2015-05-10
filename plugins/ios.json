@@ -5,77 +5,8 @@
     },
     "config_munge": {
         "files": {
-<<<<<<< HEAD
             "framework": {
                 "parents": {
-                    "libiconv.dylib": [
-                        {
-                            "xml": false,
-                            "count": 2
-                        }
-                    ],
-                    "AVFoundation.framework": [
-                        {
-                            "xml": false,
-                            "count": 2
-                        }
-                    ],
-                    "AssetsLibrary.framework": [
-                        {
-                            "xml": false,
-                            "count": 2
-                        }
-                    ],
-                    "CoreVideo.framework": [
-                        {
-                            "xml": false,
-                            "count": 2
-                        }
-                    ],
-                    "QuartzCore.framework": [
-                        {
-                            "xml": false,
-                            "count": 2
-=======
-            "config.xml": {
-                "parents": {
-                    "/*": [
-                        {
-                            "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" value=\"CDVStatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"StatusBarOverlaysWebView\" value=\"true\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
-                            "count": 1
-                        }
-                    ]
-                }
-            },
-            "framework": {
-                "parents": {
-                    "libiconv.dylib": [],
-                    "AVFoundation.framework": [],
-                    "AssetsLibrary.framework": [
-                        {
-                            "xml": "false",
-                            "count": 1
->>>>>>> 85b8890d6aa88040eec24302fbf945dce44e46dd
-                        }
-                    ],
-                    "CoreVideo.framework": [],
-                    "QuartzCore.framework": [],
                     "ImageIO.framework": [
                         {
                             "xml": true,
@@ -94,13 +25,13 @@
                             "count": 2
                         }
                     ],
-                    "MobileCoreServices.framework": [
+                    "AssetsLibrary.framework": [
                         {
                             "xml": false,
                             "count": 1
                         }
                     ],
-                    "CoreMedia.framework": [
+                    "MobileCoreServices.framework": [
                         {
                             "xml": false,
                             "count": 1
@@ -111,10 +42,6 @@
             "config.xml": {
                 "parents": {
                     "/*": [
-                        {
-                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"ios-package\" value=\"CDVBarcodeScanner\" /></feature>",
-                            "count": 1
-                        },
                         {
                             "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
                             "count": 1
@@ -134,10 +61,6 @@
                         {
                             "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
                             "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"CsZBar\"><param name=\"ios-package\" value=\"CsZBar\" /></feature>",
-                            "count": 1
                         }
                     ]
                 }
@@ -155,20 +78,13 @@
         }
     },
     "installed_plugins": {
-<<<<<<< HEAD
-        "com.phonegap.plugins.barcodescanner": {
-=======
-        "org.apache.cordova.statusbar": {
->>>>>>> 85b8890d6aa88040eec24302fbf945dce44e46dd
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "org.apache.cordova.camera": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "org.apache.cordova.statusbar": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "org.cloudsky.cordovaplugins.zbar": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
