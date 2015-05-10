@@ -5,6 +5,7 @@
     },
     "config_munge": {
         "files": {
+<<<<<<< HEAD
             "framework": {
                 "parents": {
                     "libiconv.dylib": [
@@ -35,8 +36,46 @@
                         {
                             "xml": false,
                             "count": 2
+=======
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" value=\"CDVStatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarOverlaysWebView\" value=\"true\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "framework": {
+                "parents": {
+                    "libiconv.dylib": [],
+                    "AVFoundation.framework": [],
+                    "AssetsLibrary.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+>>>>>>> 85b8890d6aa88040eec24302fbf945dce44e46dd
                         }
                     ],
+                    "CoreVideo.framework": [],
+                    "QuartzCore.framework": [],
                     "ImageIO.framework": [
                         {
                             "xml": true,
@@ -116,7 +155,11 @@
         }
     },
     "installed_plugins": {
+<<<<<<< HEAD
         "com.phonegap.plugins.barcodescanner": {
+=======
+        "org.apache.cordova.statusbar": {
+>>>>>>> 85b8890d6aa88040eec24302fbf945dce44e46dd
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "org.apache.cordova.camera": {
