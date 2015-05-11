@@ -41,6 +41,11 @@
                 <p class="event received">Device is Ready</p>
             </div>
         </div> -->
+
+
+
+
+
         <!--=========================================================== Homepage ==============================-->
         <div data-role="page" id="homepage">
         	<div>
@@ -115,15 +120,15 @@
         			</a>
         			Treatment Update
         		</span>
-        		<a href=""><button class="login-button">Update</button></a>
+        		<!-- <a href=""><button class="login-button">Update</button></a> -->
         	</div>
         	<div style="position: relative">
         		<div class="user-card plan-cards" style="color: #303030">
         			<div style="height: 70px; width: 100%; display: block">
         				<div style="display: inline-block; float:left"><img src="img/user.png" style="width: 50px; height: auto; padding-top: 10px;" alt=""></div>
         				<div style="display: inline-block; padding-left: 10px; float:left;">
-        					<h3 style="margin-bottom: 0; margin-top: 10px;">Daniel Lewis</h3>
-        					<p style="margin-top: 5px; margin-bottom: 10px; font-size: 14px; color: #585F69;" >danlewis@aviva.com</p>
+        					<h3 style="margin-bottom: 0; margin-top: 10px;">John Smith</h3>
+        					<p style="margin-top: 5px; margin-bottom: 10px; font-size: 14px; color: #585F69;">johnsmith@harleystreetdc.co.uk</p>
         				</div>
         			</div>
         			<p style="border-top: 1px solid #b7b7b7; margin-top: 0; padding-top: 10px; color: #585F69; font-size: 14px;">
@@ -144,8 +149,11 @@
         			<!-- <div class="plan-options">
         				<input type="checkbox" name="1" data-role="none"><span class="plan-name">Fillings/Crowning</span> <span class="plan-price">£9.3</span>
         			</div> -->
-
         		</div>
+						<!-- <div class-"user-card plan-cards center">
+							<a href="#menu" class="orange waves-effect waves-light btn left">Send Insurance Claim</a>
+						</div> -->
+
         		<!-- <div class="user-card plan-cards">
         			<a href="#teeth-numbers">
         				<h3 id="teeth-numbers-link">
@@ -159,6 +167,9 @@
         			<textarea id="notes" placeholder="Make notes here"></textarea>
         		</div> -->
         	</div>
+					<div class="footer">
+						<a onclick="submitClaim()" href="#menu"><button class="qr-button">Send Insurance Claim</button></a>
+					</div>
         </div>
 
         <!--=========================================================== Teeth Numbers ==============================-->
@@ -202,9 +213,35 @@
         </script>
         <script type="text/javascript">
 
-            function getTeeth() {
+            /*this.changePicture = function(event) {
+              event.preventDefault();
+              alert("Visual scan initiating...");
+              if (!navigator.camera) {
+                  alert("Camera API not supported", "Error");
+                  return;
+              }
+              var options =   {   quality: 50,
+                                  destinationType: Camera.DestinationType.DATA_URL,
+                                  sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Album
+                                  encodingType: 0     // 0=JPG 1=PNG
+                              };
 
-            }
+              navigator.camera.getPicture(
+                  function(imgData) {
+                      $('.media-object', this.$el).attr('src', "data:image/jpeg;base64,"+imgData);
+                  },
+                  function() {
+                      alert('Error taking picture', 'Error');
+                  },
+                  options);
+
+              return false;
+            };*/
+						function submitClaim() {
+							alert('Claim has been submitted');
+							// navigator.notification.alert("Claim has been submmited", nil, "Done", "Ok")
+						}
+
 
             function scan() {
                 if (!navigator.camera) {
@@ -222,7 +259,6 @@
                 navigator.camera.getPicture(
                     function(imgData) {
                         $('#qr-square').attr('src', "data:image/jpeg;base64,"+imgData);
-												window.location = ''
                     },
                     function() {
                         alert('Error taking picture', 'Error');
