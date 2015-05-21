@@ -9,11 +9,15 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"StatusBar\"><param name=\"wp-package\" value=\"StatusBar\" /></feature>",
+                            "xml": "<feature name=\"Camera\"><param name=\"wp-package\" value=\"Camera\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Camera\"><param name=\"wp-package\" value=\"Camera\" /></feature>",
+                            "xml": "<feature name=\"Notification\"><param name=\"wp-package\" value=\"Notification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"wp-package\" value=\"StatusBar\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -36,11 +40,17 @@
         }
     },
     "installed_plugins": {
-        "org.apache.cordova.statusbar": {
-            "PACKAGE_NAME": "{30de09c0-ea3d-11e4-83b2-77921213f80e}"
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "{818733b0-fc67-11e4-b263-d15f348eea2f}"
         },
         "org.apache.cordova.camera": {
-            "PACKAGE_NAME": "{30de09c0-ea3d-11e4-83b2-77921213f80e}"
+            "PACKAGE_NAME": "{818733b0-fc67-11e4-b263-d15f348eea2f}"
+        },
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "{818733b0-fc67-11e4-b263-d15f348eea2f}"
+        },
+        "org.apache.cordova.statusbar": {
+            "PACKAGE_NAME": "{818733b0-fc67-11e4-b263-d15f348eea2f}"
         }
     },
     "dependent_plugins": {}

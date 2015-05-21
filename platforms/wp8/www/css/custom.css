@@ -71,6 +71,11 @@ a {
   background-color: #F78F1E !important;
   color: #fff;
 }
+footer {
+  background-color: #F78F1E !important;
+  color: #fff;
+  text-align: center;
+}
 .treatment-divs {
   border: 1px solid #ddd;
   padding: 6px;
@@ -259,7 +264,7 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
                                                 font-size: 2rem;
                                                 transition: .3s color; }
 
-#qr-info {
+.qr-info {
   width: 24px;
   display: inline-flex;
   margin-right: 10px;
@@ -286,7 +291,7 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
   margin-top: 5px;
   margin-right: 10px;
 }
-#teeth-numbers-link {
+.details-link {
   color: #303030;
   margin-top: 0px !important;
   margin-bottom: 0px !important;
@@ -297,4 +302,44 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
   margin-bottom: 5px;
   border-bottom: 1px solid #B7B7B7;
   padding: 0px 10px 6px 10px;
+}
+@media screen and (max-width: 1414px) {
+  .slogan {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 1291px) {
+  #logo-heading {
+    font-size: 22px !important;
+  }
+}
+@media screen and (max-width: 1229px) {
+  
+}
+@media screen and (max-width: 1206px) {
+  #logo-heading {
+    margin: 0px !important;
+    font-size: 22px !important;
+  }
+}
+@media screen and (max-width: 1133px) {
+  .slogan {
+    width: 20%;
+  }
+}
+#sign-canvas {
+  width: 100%;
+  display: block;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+.ui-mobile .ui-page-active {
+  overflow-y: hidden;
 }
