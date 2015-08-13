@@ -273,29 +273,19 @@
         })
 
 
-        /*function scan() {
-            if (!navigator.camera) {
-                alert("Camera API not supported", "Error");
-                return;
-            }
-            var options = {
-                quality: 50,
-                destinationType: Camera.DestinationType.DATA_URL,
-                sourceType: 1, // 0:Photo Library, 1=Camera, 2=Saved Album
-                encodingType: 0, // 0=JPG 1-=PNG
-                targetWidth: 800,
-                targetHeight: 500
-            };
-
-            navigator.camera.getPicture(
-                function(imgData) {
-                    $('#qr-square').attr('src', "data:image/jpeg;base64," + imgData);
+        function scan() {
+            cordova.plugins.barcodeScanner.scan(
+                function (result) {
+                    alert("We got a barcode\n" +
+                        "Result: " + result.text + "\n" +
+                        "Format: " + result.format + "\n" +
+                        "Cancelled: " + result.cancelled);
                 },
-                function() {
-                    alert('Error taking picture', 'Error');
-                },
-                options);
-        }*/
+                function (error) {
+                    alert("Scanning failed: " + error);
+                }
+            )
+        }
     </script>
 </body>
 

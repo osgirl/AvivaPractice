@@ -19,6 +19,10 @@
                         {
                             "xml": "<feature name=\"StatusBar\"><param name=\"wp-package\" value=\"StatusBar\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"wp-package\" value=\"BarcodeScanner\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -28,7 +32,7 @@
                     "/Deployment/App/Capabilities": [
                         {
                             "xml": "<Capability Name=\"ID_CAP_ISV_CAMERA\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<Capability Name=\"ID_CAP_MEDIALIB_PHOTO\" />",
@@ -50,6 +54,9 @@
             "PACKAGE_NAME": "{818733b0-fc67-11e4-b263-d15f348eea2f}"
         },
         "org.apache.cordova.statusbar": {
+            "PACKAGE_NAME": "{818733b0-fc67-11e4-b263-d15f348eea2f}"
+        },
+        "phonegap-plugin-barcodescanner": {
             "PACKAGE_NAME": "{818733b0-fc67-11e4-b263-d15f348eea2f}"
         }
     },
