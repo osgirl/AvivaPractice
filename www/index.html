@@ -26,6 +26,12 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi, width=device-width, height=device-height" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
     <link rel="stylesheet" type="text/css" href="assets/jquery-mobile/jquery.mobile-1.4.5.css">
     <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/font-awesome.css">
@@ -44,33 +50,69 @@
                 <p class="event received">Device is Ready</p>
             </div>
         </div> -->
-    <!--=========================================================== Homepage ==============================-->
-    <div data-role="page" id="homepage">
-        <div>
-            <div class="header">
-                <span class="welcome">Welcome</span>
-            </div>
-            <div style="margin-top: 5%; text-align: center; position: relative;">
-                <div class="user-card login-card">
-                    <h2 class="card-heading">Sign In</h2>
-                    <div style="padding: 0 6px;">
-                        <p class="login-labels">Username</p>
-                        <div class="input-field">
-                            <input class="input validate" type="text">
-                        </div>
-                        <p class="login-labels">Password</p>
-                        <div class="input-field">
-                            <input class="input validate" type="password">
-                        </div>
+        <!--=========================================================== Homepage ==============================-->
+        <div data-role="page" id="homepage">
+            <div>
+                <div class="row">
+                    <div class="col s12 center">
+                        <!-- <span class="welcome">Welcome</span> -->
+                        <img src="img/Dentalink-Logo.png" style="margin-top: 5%;">
                     </div>
-                    <h4 class="card-footer">Forgot your password?</h4>
                 </div>
-            </div>
-            <div class="footer">
+                <!-- <div style="margin-top: 5%; text-align: center; position: relative;">
+                    <div class="user-card login-card">
+                        <h2 class="card-heading">Sign In</h2>
+                        <div style="padding: 0 6px;">
+                            <p class="login-labels">Username</p>
+                            <div class="input-field">
+                                <input class="input validate" type="text">
+                            </div>
+                            <p class="login-labels">Password</p>
+                            <div class="input-field">
+                                <input class="input validate" type="password">
+                            </div>
+                        </div>
+                        <h4 class="card-footer">Forgot your password?</h4>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <form class="col s12">
+                        <div>
+                            <p style="color: #681950;" class="col s12 center">SIGN IN WITH YOUR USERNAME AND PASSWORD</p>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col s12" style="">
+                              <input id="name" type="text" class="validate">
+                              <label for="name">Username</label>
+                          </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12" style="">
+                          <input id="icon_telephone" type="password" class="validate">
+                          <label for="icon_telephone">Password</label>
+                      </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="input-field col s12" style="">
+                        <a class="qr-button waves-effect waves-light btn btn-large" id="btn">
+                            <img src="img/svgs/change-password.svg" style="width: 7%;">Sign in
+                        </a>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col s12 center">
+                  <p><a href="forgot-password.html" style="color: #681950;"><u>Forgotten log in details</u></a></p>
+              </div>
+          </div>
+      </div>
+            <!-- <div class="footer">
                 <a href="#menu-page">
                     <button class="qr-button">Sign In</button>
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
     <!--=========================================================== menu-page ==============================-->
@@ -101,22 +143,22 @@
         <p style="text-align: center; padding-left: 30px;">
             Monitoring QR Code...
             <a href="#patient-details-page"><img class="qr-info" src="img/qrinfo.png"></p>
-        </a>
-        <div style="margin-top: 40px;">
-            <!-- <a href="#">Start scan.</a> -->
-            <img id="qr-square" src="img/qr-square.png">
-        </div>
-        <div class="footer">
-            <a href="#menu-page">
-                <button class="qr-button">Cancel</button>
             </a>
+            <div style="margin-top: 40px;">
+                <!-- <a href="#">Start scan.</a> -->
+                <img id="qr-square" src="img/qr-square.png">
+            </div>
+            <div class="footer">
+                <a href="#menu-page">
+                    <button class="qr-button">Cancel</button>
+                </a>
+            </div>
         </div>
-    </div>
-    <!--=========================================================== Patient Details ==============================-->
-    <div data-role="page" id="patient-details-page">
-        <div class="header" style="text-align: center">
-            <span class="welcome">
-                 <a href="#menu-page">
+        <!--=========================================================== Patient Details ==============================-->
+        <div data-role="page" id="patient-details-page">
+            <div class="header" style="text-align: center">
+                <span class="welcome">
+                   <a href="#menu-page">
                     <img class="back-arrow" src="img/action_back.png">
                 </a>
                 Treatment Update
@@ -150,47 +192,47 @@
                 <!-- <div class="plan-options">
                         <input type="checkbox" name="1" data-role="none"><span class="plan-name">Fillings/Crowning</span> <span class="plan-price">£9.3</span>
                     </div> -->
-            </div>
+                </div>
             <!-- <div class-"user-card plan-cards center">
                             <a href="#menu-page" class="orange waves-effect waves-light btn left">Send Insurance Claim</a>
                         </div> -->
-            <div class="user-card plan-cards">
-                <a href="#teeth-numbers-page">
-                    <h3 class="details-link">
-                        Teeth Numbers
-                        <img class="qr-info" src="img/right_chevron.png">
-                    </h3>
-                </a>
-            </div>
+                        <div class="user-card plan-cards">
+                            <a href="#teeth-numbers-page">
+                                <h3 class="details-link">
+                                    Teeth Numbers
+                                    <img class="qr-info" src="img/right_chevron.png">
+                                </h3>
+                            </a>
+                        </div>
 
-            <div class="user-card plan-cards">
-                <a href="#sign-page">
-                    <h3 class="details-link">
-                        Add Signature
-                        <img class="qr-info" src="img/right_chevron.png">
-                    </h3>
-                </a>
-            </div>
+                        <div class="user-card plan-cards">
+                            <a href="#sign-page">
+                                <h3 class="details-link">
+                                    Add Signature
+                                    <img class="qr-info" src="img/right_chevron.png">
+                                </h3>
+                            </a>
+                        </div>
             <!-- <div class="user-card plan-cards">
                     <h3 style="color: #303030; margin-top: 5px; margin-bottom: 5px;">Treatment Notes</h3>
                     <textarea id="notes" placeholder="Make notes here"></textarea>
                 </div> -->
+            </div>
+            <footer class="page-footer">
+                <a onclick="submitClaim()" href="#menu-page">
+                    <button class="qr-button">Send Insurance Claim</button>
+                </a>
+            </footer>
         </div>
-        <footer class="page-footer">
-            <a onclick="submitClaim()" href="#menu-page">
-                <button class="qr-button">Send Insurance Claim</button>
-            </a>
-        </footer>
-    </div>
-    <!--=========================================================== Teeth Numbers ==============================-->
-    <div data-role="page" id="teeth-numbers-page">
-        <div class="header" style="text-align: center">
-            <span class="welcome">
-             <a id="teeth-back" href="#patient-details-page">
-                <img class="back-arrow" src="img/action_back.png">
-            </a>
-            Teeth Numbers
-        </span>
+        <!--=========================================================== Teeth Numbers ==============================-->
+        <div data-role="page" id="teeth-numbers-page">
+            <div class="header" style="text-align: center">
+                <span class="welcome">
+                   <a id="teeth-back" href="#patient-details-page">
+                    <img class="back-arrow" src="img/action_back.png">
+                </a>
+                Teeth Numbers
+            </span>
         </div>
         <div class="user-card plan-cards">
             <h3 id="teeth-numbers-heading">Teeth Numbers</h3>
@@ -220,73 +262,73 @@
     <div data-role="page" id="sign-page">
         <div class="header" style="text-align: center">
             <span class="welcome">
-             <a id="sign-back" href="#patient-details-page">
+               <a id="sign-back" href="#patient-details-page">
                 <img class="back-arrow" src="img/action_back.png">
             </a>
             Sign
         </span>
-        </div>
-        <div class="user-card plan-cards">
-            <canvas id="sign-canvas" style="border:1px solid #000000;"></canvas>
-        </div>
     </div>
+    <div class="user-card plan-cards">
+        <canvas id="sign-canvas" style="border:1px solid #000000;"></canvas>
+    </div>
+</div>
 
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-    </script>
-    <script type="text/javascript">
-        
-        var teeth = [];
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+    app.initialize();
+</script>
+<script type="text/javascript">
 
-        $('#teeth-back').on('click', function(event,ui) {
-            event.preventDefault();
-            
-            $.each($("input[name='teeth-check[]']:checked"), function() {
-                teeth.push($(this).text());
-            });
-            $.mobile.changePage("#patient-details-page", {});
+    var teeth = [];
+
+    $('#teeth-back').on('click', function(event,ui) {
+        event.preventDefault();
+
+        $.each($("input[name='teeth-check[]']:checked"), function() {
+            teeth.push($(this).text());
         });
+        $.mobile.changePage("#patient-details-page", {});
+    });
 
-        $("#teeth-numbers-page").on("pagecontainerload", function(event,ui) {
-            $.each(teeth, function(index, value) {
-                $.each($("input[name='teeth-numbers[]']"), function() {
-                    if($(this).text() === value) {
-                        $(this).attr('checked', true);
-                    }
-                })
-            })
-        });
-
-        $(document).ready(function() {
-            $("#sign-canvas").sketch();
-        })
-        
-
-        function submitClaim() {
-            alert('Claim has been submitted');
-        }
-
-        $("#sign-page").on("touchmove", function(e) {
-            e.preventDefault();
-        })
-
-
-        function scan() {
-            cordova.plugins.barcodeScanner.scan(
-                function (result) {
-                    alert("We got a barcode\n" +
-                        "Result: " + result.text + "\n" +
-                        "Format: " + result.format + "\n" +
-                        "Cancelled: " + result.cancelled);
-                },
-                function (error) {
-                    alert("Scanning failed: " + error);
+    $("#teeth-numbers-page").on("pagecontainerload", function(event,ui) {
+        $.each(teeth, function(index, value) {
+            $.each($("input[name='teeth-numbers[]']"), function() {
+                if($(this).text() === value) {
+                    $(this).attr('checked', true);
                 }
+            })
+        })
+    });
+
+    $(document).ready(function() {
+        $("#sign-canvas").sketch();
+    })
+
+
+    function submitClaim() {
+        alert('Claim has been submitted');
+    }
+
+    $("#sign-page").on("touchmove", function(e) {
+        e.preventDefault();
+    })
+
+
+    function scan() {
+        cordova.plugins.barcodeScanner.scan(
+            function (result) {
+                alert("We got a barcode\n" +
+                    "Result: " + result.text + "\n" +
+                    "Format: " + result.format + "\n" +
+                    "Cancelled: " + result.cancelled);
+            },
+            function (error) {
+                alert("Scanning failed: " + error);
+            }
             )
-        }
-    </script>
+    }
+</script>
 </body>
 
 </html>
