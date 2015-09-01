@@ -273,6 +273,7 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
                                                   display: inline-flex;
                                                   margin-right: 10px;
                                                   float: right;
+                                                  margin-top: 4%;
                                                 }
                                                 #qr-square {
                                                   width: 70%;
