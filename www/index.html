@@ -199,11 +199,21 @@
                 </div>
             </div>
         </div>
-        <div class="footer">
+        <div class="row" style="margin-top: -7%;">            
+            <p style="color: #681950;" class="col s12 center">
+                To send an invoice please click below button to scan the qr code
+            </p>            
+            <div class="input-field col s12 center">
+                <a class="qr-button waves-effect waves-light btn btn-large" id="btn" onclick="scan()" href="#patient-details-page">
+                    Scan QR Code
+                </a>
+            </div>
+        </div>
+        <!-- <div class="footer">
             <a onclick="scan()" href="#patient-details-page">
                 <button class="qr-button">Scan QR Code</button>
             </a>
-        </div>
+        </div> -->
     </div>
     <!--=========================================================== Read QR ==============================-->
     <div data-role="page" id="read-qr-page">
@@ -225,7 +235,7 @@
         <div data-role="page" id="patient-details-page">
             <div class="header" style="text-align: center">
                 <span class="welcome">
-                 <a href="#menu-page">
+                   <a href="#menu-page">
                     <img class="back-arrow" src="img/action_back.png">
                 </a>
                 Treatment Update
@@ -295,7 +305,7 @@
         <div data-role="page" id="teeth-numbers-page">
             <div class="header" style="text-align: center">
                 <span class="welcome">
-                 <a id="teeth-back" href="#patient-details-page">
+                   <a id="teeth-back" href="#patient-details-page">
                     <img class="back-arrow" src="img/action_back.png">
                 </a>
                 Teeth Numbers
@@ -329,7 +339,7 @@
     <div data-role="page" id="sign-page">
         <div class="header" style="text-align: center">
             <span class="welcome">
-             <a id="sign-back" href="#patient-details-page">
+               <a id="sign-back" href="#patient-details-page">
                 <img class="back-arrow" src="img/action_back.png">
             </a>
             Sign
@@ -385,10 +395,10 @@
     function scan() {
         cordova.plugins.barcodeScanner.scan(
             function (result) {
-                alert("We got a barcode\n" +
-                    "Result: " + result.text + "\n" +
-                    "Format: " + result.format + "\n" +
-                    "Cancelled: " + result.cancelled);
+                alert("We got a QR code");
+                    // "Result: " + result.text + "\n" +
+                    // "Format: " + result.format + "\n" +
+                    // "Cancelled: " + result.cancelled);
             },
             function (error) {
                 alert("Scanning failed: " + error);
