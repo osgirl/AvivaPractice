@@ -259,18 +259,21 @@
             </div>
             <div class="user-card plan-cards">
                 <h4 style="color: #303030; margin-top: 0px; margin-bottom: 5px;">Treatment Plan</h4>
-                <!-- <div class="plan-options">
-                    <input type="checkbox" name="1" data-role="none"><span class="plan-name">New Patient Examination  </span> <span class="plan-price">£250</span>
-                </div> -->
+                <div class="plan-options">
+                    <input type="checkbox" name="1" data-role="none"><a href=""><span class="plan-name modal-trigger" data-target="modal1">New Patient Examination  </span></a> <!-- <span class="plan-price">£250</span> -->
+                </div>
 
                 <!-- Modal Trigger -->
-                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+                <!-- <button data-target="modal1" class="btn modal-trigger">Modal</button> -->
 
                 <!-- Modal Structure -->
                 <div id="modal1" class="modal">
                     <div class="modal-content">
-                      <h4>Modal Header</h4>
-                      <p>A bunch of text</p>
+                      <h6>Patient Examination</h6>
+                      <hr>
+                      Fee = <span class="plan-price">£90</span>
+                      <p>Tooth Number = <span class="plan-price">N/A</span></p>
+                      <p>Date of Treatment = <span class="plan-price"><input type="date" class="datepicker"></span></p>
                   </div>
                   <div class="modal-footer">
                       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
@@ -383,68 +386,74 @@
     </div>
 
     <script type="text/javascript">
-        $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('#modal1').leanModal();
-});
-    </script>
-
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-    </script>
-    <script type="text/javascript">
-
-        var teeth = [];
-
-        $('#teeth-back').on('click', function(event,ui) {
-            event.preventDefault();
-
-            $.each($("input[name='teeth-check[]']:checked"), function() {
-                teeth.push($(this).text());
-            });
-            $.mobile.changePage("#patient-details-page", {});
-        });
-
-        $("#teeth-numbers-page").on("pagecontainerload", function(event,ui) {
-            $.each(teeth, function(index, value) {
-                $.each($("input[name='teeth-numbers[]']"), function() {
-                    if($(this).text() === value) {
-                        $(this).attr('checked', true);
-                    }
-                })
-            })
-        });
-
         $(document).ready(function() {
-            $("#sign-canvas").sketch();
+          $('.modal-trigger').leanModal();
+      });
+    </script>
+    <script type="text/javascript">
+
+      $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
+  </script>
+
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript">
+    app.initialize();
+</script>
+<script type="text/javascript">
+
+    var teeth = [];
+
+    $('#teeth-back').on('click', function(event,ui) {
+        event.preventDefault();
+
+        $.each($("input[name='teeth-check[]']:checked"), function() {
+            teeth.push($(this).text());
+        });
+        $.mobile.changePage("#patient-details-page", {});
+    });
+
+    $("#teeth-numbers-page").on("pagecontainerload", function(event,ui) {
+        $.each(teeth, function(index, value) {
+            $.each($("input[name='teeth-numbers[]']"), function() {
+                if($(this).text() === value) {
+                    $(this).attr('checked', true);
+                }
+            })
         })
+    });
+
+    $(document).ready(function() {
+        $("#sign-canvas").sketch();
+    })
 
 
-        function submitClaim() {
-            alert('Invoice has been sent.');
-        }
+    function submitClaim() {
+        alert('Invoice has been sent.');
+    }
 
-        $("#sign-page").on("touchmove", function(e) {
-            e.preventDefault();
-        })
+    $("#sign-page").on("touchmove", function(e) {
+        e.preventDefault();
+    })
 
 
-        function scan() {
-            cordova.plugins.barcodeScanner.scan(
-                function (result) {
-                    alert("We got a QR code");
+    function scan() {
+        cordova.plugins.barcodeScanner.scan(
+            function (result) {
+                alert("We got a QR code");
                     // "Result: " + result.text + "\n" +
                     // "Format: " + result.format + "\n" +
                     // "Cancelled: " + result.cancelled);
-        },
-        function (error) {
-            alert("Scanning failed: " + error);
-        }
-        )
-        }
-    </script>
+    },
+    function (error) {
+        alert("Scanning failed: " + error);
+    }
+    )
+    }
+</script>
 </body>
 
 </html>
