@@ -257,9 +257,31 @@
             </div>
             <div class="user-card plan-cards">
                 <h4 style="color: #303030; margin-top: 0px; margin-bottom: 5px;">Treatment Plan</h4>
-                <div class="plan-options">
-                    <input type="checkbox" name="1" data-role="none"><span class="plan-name">New Patient Examination  </span> <span class="plan-price">£250</span>
-                </div>
+                <div>
+                 <table style="width:100%">
+                    <tr>
+                       <td><input type="checkbox" name="1" data-role="none"></td>
+                       <td>
+                           <tr>
+                               <td><span class="plan-name">Patient Examination</span></td>
+                               <td><span>£90</span></td>
+                               <td><span>£90</span></td>
+                           </tr>
+                       </td>
+                    </tr>
+                    <tr>
+                        <td><span>£90</span></td>
+                    </tr>
+                <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                </tr>
+            </table>
+        </div>
+                <!-- <div class="plan-options">
+                    <input type="checkbox" name="1" data-role="none"><span class="plan-name">New Patient Examination  </span> <hr> <span class="plan-price">£250</span>
+                </div> -->
                 <div class="plan-options">
                     <input type="checkbox" name="1" data-role="none"><span class="plan-name">Panoral X-Ray</span> <span class="plan-price">£90</span>
                 </div>
@@ -297,10 +319,10 @@
             </div>
             <div class="row">
                 <div class="input-field col s12 center">
-                <a class="qr-button waves-effect waves-light btn btn-large" id="btn" onclick="submitClaim()" href="#menu-page">
-                    Send Invoice
-                </a>
-            </div>
+                    <a class="qr-button waves-effect waves-light btn btn-large" id="btn" onclick="submitClaim()" href="#menu-page">
+                        Send Invoice
+                    </a>
+                </div>
             </div>
             <!-- <footer class="page-footer">
                 <a onclick="submitClaim()" href="#menu-page">
@@ -358,7 +380,7 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
-            <a class="qr-button waves-effect waves-light btn btn-large" id="btn" onclick="" href="#patient-details-page">
+                <a class="qr-button waves-effect waves-light btn btn-large" id="btn" onclick="" href="#patient-details-page">
                     Done
                 </a>
             </div>
