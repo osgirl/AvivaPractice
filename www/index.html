@@ -27,10 +27,10 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi, width=device-width, height=device-height" />
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
 
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
     <link rel="stylesheet" type="text/css" href="assets/jquery-mobile/jquery.mobile-1.4.5.css">
@@ -257,37 +257,30 @@
             </div>
             <div class="user-card plan-cards">
                 <h4 style="color: #303030; margin-top: 0px; margin-bottom: 5px;">Treatment Plan</h4>
-                <div>
-                 <table style="width:100%">
-                    <tr>
-                       <td><input type="checkbox" name="1" data-role="none"></td>
-                       <td>
-                           <tr>
-                               <td><span class="plan-name">Patient Examination</span></td>
-                               <td><span>£90</span></td>
-                               <td><span>£90</span></td>
-                           </tr>
-                       </td>
-                    </tr>
-                    <tr>
-                        <td><span>£90</span></td>
-                    </tr>
-                <tr>
-                    <td>Eve</td>
-                    <td>Jackson</td>
-                    <td>94</td>
-                </tr>
-            </table>
-        </div>
                 <!-- <div class="plan-options">
-                    <input type="checkbox" name="1" data-role="none"><span class="plan-name">New Patient Examination  </span> <hr> <span class="plan-price">£250</span>
+                    <input type="checkbox" name="1" data-role="none"><span class="plan-name">New Patient Examination  </span> <span class="plan-price">£250</span>
                 </div> -->
-                <div class="plan-options">
-                    <input type="checkbox" name="1" data-role="none"><span class="plan-name">Panoral X-Ray</span> <span class="plan-price">£90</span>
-                </div>
-                <div class="plan-options">
-                    <input type="checkbox" name="1" data-role="none"><span class="plan-name">Hygiene</span> <span class="plan-price">£85</span>
-                </div>
+
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                    <div class="modal-content">
+                      <h4>Modal Header</h4>
+                      <p>A bunch of text</p>
+                  </div>
+                  <div class="modal-footer">
+                      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                  </div>
+              </div>
+
+              <div class="plan-options">
+                <input type="checkbox" name="1" data-role="none"><span class="plan-name">Panoral X-Ray</span> <span class="plan-price">£90</span>
+            </div>
+            <div class="plan-options">
+                <input type="checkbox" name="1" data-role="none"><span class="plan-name">Hygiene</span> <span class="plan-price">£85</span>
+            </div>
                 <!-- <div class="plan-options">
                         <input type="checkbox" name="1" data-role="none"><span class="plan-name">Fillings/Crowning</span> <span class="plan-price">£9.3</span>
                     </div> -->
@@ -386,6 +379,13 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('#modal1').openModal();
+});
+    </script>
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>

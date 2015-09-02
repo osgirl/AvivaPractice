@@ -1,0 +1,19 @@
+{
+  "name": "AvivaPractice",
+  "version": "1.0.11",
+  "homepage": "https://github.com/SweetPixel/AvivaPractice",
+  "authors": [
+    "Muhammad Sayyam <sayyam@sweetpixelstudios.com>"
+  ],
+  "license": "MIT",
+  "dependencies" : {
+      "Materialize" : "~0.97.0"
+    },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
