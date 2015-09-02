@@ -29,6 +29,9 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="css/materialize.min.css">
 
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+
     <!-- Compiled and minified JavaScript -->
     <script type="text/javascript" src="js/materialize.min.js"></script>
 
@@ -36,7 +39,6 @@
     <link rel="stylesheet" type="text/css" href="assets/jquery-mobile/jquery.mobile-1.4.5.css">
     <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
-    <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="assets/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="js/sketch.js"></script>
     <title>Hello World</title>
@@ -199,10 +201,10 @@
                 </div>
             </div>
         </div>
-        <div class="row" style="">            
+        <div class="row" style="">
             <p style="color: #681950;" class="col s12 center">
                 To send an invoice please click below button to scan the qr code
-            </p>            
+            </p>
             <div class="input-field col s12 center">
                 <a class="qr-button waves-effect waves-light btn btn-large" id="btn" onclick="scan()" href="#patient-details-page">
                     Scan QR Code
@@ -383,7 +385,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('#modal1').openModal();
+    $('#modal1').leanModal();
 });
     </script>
 
