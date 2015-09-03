@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/materialize.min.css">
 
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
 
 
     <!-- Compiled and minified JavaScript -->
@@ -237,7 +238,7 @@
         <div data-role="page" id="patient-details-page">
             <div class="header" style="text-align: center">
                 <span class="welcome">
-                 <a href="#menu-page">
+                   <a href="#menu-page">
                     <img class="back-arrow" src="img/action_back.png">
                 </a>
                 Treatment Update
@@ -273,7 +274,7 @@
                       <hr>
                       Fee : <span class="plan-price">£90</span>
                       <p>Tooth Number : <span class="plan-price">N/A</span></p>
-                      <p>Date of Treatment <input  placeholder="pick a date" type="date" class="datepicker"></p>
+                      <p>Date of Treatment <input type="date" class="datepicker" placeholder="Pick a Date"></p>
                   </div>
                   <div class="modal-footer">
                       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
@@ -332,7 +333,7 @@
         <div data-role="page" id="teeth-numbers-page">
             <div class="header" style="text-align: center">
                 <span class="welcome">
-                 <a id="teeth-back" href="#patient-details-page">
+                   <a id="teeth-back" href="#patient-details-page">
                     <img class="back-arrow" src="img/action_back.png">
                 </a>
                 Teeth Numbers
@@ -391,11 +392,11 @@
       });
     </script>
     <script>
-      $('.datepicker').pickadate({
+  $('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month
     selectYears: 15 // Creates a dropdown of 15 years to control year
-});
-  </script>
+  });
+</script>
 
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
