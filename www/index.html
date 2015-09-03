@@ -29,6 +29,8 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="css/materialize.min.css">
 
+
+    <link rel="stylesheet" href="assets/kalandae/kalandae.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui.js"></script>
 
@@ -42,6 +44,11 @@
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
     <script type="text/javascript" src="assets/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="js/sketch.js"></script>
+
+    <script type="text/javascript" src="assets/kalandae/kalandae.js"></script>
+    <script type="text/javascript" charset="utf-8">
+            window.moment = Kalendae.moment;
+    </script>
     <title>Hello World</title>
 </head>
 
@@ -274,7 +281,7 @@
                       <hr>
                       Fee : <span class="plan-price">£90</span>
                       <p>Tooth Number : <span class="plan-price">N/A</span></p>
-                      <p>Date of Treatment <input type="text" id="datepicker"></p>
+                      <p>Date of Treatment <input placeholder="Click here to select a date" type="text" class="auto-kal"></p>
                   </div>
                   <div class="modal-footer">
                       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
