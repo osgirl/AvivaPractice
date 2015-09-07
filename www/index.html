@@ -41,11 +41,13 @@
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
     <link rel="stylesheet" type="text/css" href="assets/jquery-mobile/jquery.mobile-1.4.5.css">
     <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
     <script type="text/javascript" src="assets/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="js/sketch.js"></script>
 
     <script type="text/javascript" src="assets/kalandae/kalandae.js"></script>
+    <script type="text/javascript" src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" charset="utf-8">
             window.moment = Kalendae.moment;
     </script>
@@ -463,7 +465,7 @@
 
 
     function submitClaim() {
-        alert('Invoice has been sent.');
+        swal('Invoice has been sent.');
     }
 
     $("#sign-page").on("touchmove", function(e) {
@@ -474,13 +476,13 @@
     function scan() {
         cordova.plugins.barcodeScanner.scan(
             function (result) {
-                alert("We got a QR code");
+                    swal("QR Code Scanned");
                     // "Result: " + result.text + "\n" +
                     // "Format: " + result.format + "\n" +
                     // "Cancelled: " + result.cancelled);
     },
     function (error) {
-        alert("Scanning failed: " + error);
+        swal("Scanning failed: " + error);
     }
     )
     }
