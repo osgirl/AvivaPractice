@@ -58,6 +58,9 @@
         },
         "phonegap-plugin-barcodescanner": {
             "PACKAGE_NAME": "{818733b0-fc67-11e4-b263-d15f348eea2f}"
+        },
+        "cordova-plugin-datepicker": {
+            "PACKAGE_NAME": "{818733b0-fc67-11e4-b263-d15f348eea2f}"
         }
     },
     "dependent_plugins": {}
