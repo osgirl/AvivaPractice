@@ -289,14 +289,39 @@
               </div>
 
               <div class="plan-options">
-                <input type="checkbox" name="1" data-role="none"><span class="plan-name">Panoral X-Ray</span> <span class="plan-price">£90</span>
+                <input type="checkbox" name="1" data-role="none"><a href=""><span class="plan-name modal-trigger" data-target="modal2">Panoral X-Ray</span></a> <!-- <span class="plan-price">£90</span> -->
+
+                <!-- Modal Structure -->
+                <div id="modal2" class="modal" style="width: 100%; min-height: 100%;">
+                    <div class="modal-content">
+                      <h6>Panoral X-Rays</h6>
+                      <hr>
+                      Fee : <span class="plan-price">£90</span>
+                      <p>Tooth Number : <span class="plan-price">LL8</span></p>
+                      <p>Date of Treatment <input placeholder="Click here to select a date" type="text" class="auto-kal"></p>
+                  </div>
+                  <div class="modal-footer">
+                      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+                  </div>
+              </div>
             </div>
             <div class="plan-options">
-                <input type="checkbox" name="1" data-role="none"><span class="plan-name">Hygiene</span> <span class="plan-price">£85</span>
+                <input type="checkbox" name="1" data-role="none"><a href=""><span class="plan-name modal-trigger" data-target="modal3">Hygiene</span></a> <!-- <span class="plan-price">£85</span> -->
+
+                <!-- Modal Structure -->
+                <div id="modal3" class="modal" style="width: 100%; min-height: 100%;">
+                    <div class="modal-content">
+                      <h6>Hygiene</h6>
+                      <hr>
+                      Fee : <span class="plan-price">£90</span>
+                      <p>Tooth Number : <span class="plan-price">UL8</span></p>
+                      <p>Date of Treatment <input placeholder="Click here to select a date" type="text" class="auto-kal"></p>
+                  </div>
+                  <div class="modal-footer">
+                      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+                  </div>
+              </div>
             </div>
-                <!-- <div class="plan-options">
-                        <input type="checkbox" name="1" data-role="none"><span class="plan-name">Fillings/Crowning</span> <span class="plan-price">£9.3</span>
-                    </div> -->
                 </div>
             <!-- <div class-"user-card plan-cards center">
                             <a href="#menu-page" class="orange waves-effect waves-light btn left">Send Insurance Claim</a>
