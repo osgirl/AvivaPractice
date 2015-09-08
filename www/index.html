@@ -43,14 +43,12 @@
     <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+
     <script type="text/javascript" src="assets/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="js/sketch.js"></script>
 
-    <script type="text/javascript" src="assets/kalandae/kalandae.js"></script>
     <script type="text/javascript" src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
-    <script type="text/javascript" charset="utf-8">
-        window.moment = Kalendae.moment;
-    </script>
     <title>Hello World</title>
 </head>
 
@@ -94,14 +92,14 @@
                         </div>
                         <div class="row">
                           <div class="input-field col s12" style="">
-                              <input id="name" type="text" class="validate">
-                              <label for="name">Username</label>
+                              <input placeholder="username" id="name" type="text" class="validate">
+                              <!-- <label for="name">Username</label> -->
                           </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12" style="">
-                          <input id="icon_telephone" type="password" class="validate">
-                          <label for="icon_telephone">Password</label>
+                          <input placeholder="password" id="icon_telephone" type="password" class="validate">
+                          <!-- <label for="icon_telephone">Password</label> -->
                       </div>
                   </div>
 
@@ -339,7 +337,8 @@
 
                         <div class="user-card plan-cards">
                             <a href="#sign-page">
-                                <h4 class="details-link">
+                                <div id="imgLink" ></div>
+                                <h4 id="signatureLink" class="details-link">
                                     Add Signature
                                     <img class="qr-info" src="img/right_chevron.png">
                                 </h4>
@@ -413,7 +412,7 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <a class="qr-button waves-effect waves-light btn btn-large" id="btn" onclick="" href="#patient-details-page">
+                <a class="qr-button waves-effect waves-light btn btn-large" id="btn" onclick="canvasToImageAppend()" href="#patient-details-page">
                     Done
                 </a>
             </div>
@@ -456,77 +455,84 @@
 
         })
 
-      //   document.addEventListener("deviceready", function () {
-      //     var options = {
-      //         date: new Date(),
-      //         mode: 'date'
-      //     };
 
-      //     datePicker.show(options, function(date){
-      //       swal("date result " + date); 
-      //   });
-      // });
+        $(document).ready(function() {
+          $('.modal-trigger').leanModal();
+      });
+    </script>
 
-$(document).ready(function() {
-  $('.modal-trigger').leanModal();
-});
-</script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    <script type="text/javascript">
 
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript">
-    app.initialize();
-</script>
-<script type="text/javascript">
+        var teeth = [];
 
-    var teeth = [];
+        $('#teeth-back').on('click', function(event,ui) {
+            event.preventDefault();
 
-    $('#teeth-back').on('click', function(event,ui) {
-        event.preventDefault();
-
-        $.each($("input[name='teeth-check[]']:checked"), function() {
-            teeth.push($(this).text());
+            $.each($("input[name='teeth-check[]']:checked"), function() {
+                teeth.push($(this).text());
+            });
+            $.mobile.changePage("#patient-details-page", {});
         });
-        $.mobile.changePage("#patient-details-page", {});
-    });
 
-    $("#teeth-numbers-page").on("pagecontainerload", function(event,ui) {
-        $.each(teeth, function(index, value) {
-            $.each($("input[name='teeth-numbers[]']"), function() {
-                if($(this).text() === value) {
-                    $(this).attr('checked', true);
-                }
+        $("#teeth-numbers-page").on("pagecontainerload", function(event,ui) {
+            $.each(teeth, function(index, value) {
+                $.each($("input[name='teeth-numbers[]']"), function() {
+                    if($(this).text() === value) {
+                        $(this).attr('checked', true);
+                    }
+                })
             })
+        });
+
+        $(document).ready(function() {
+            $("#sign-canvas").sketch();
         })
-    });
 
-    $(document).ready(function() {
-        $("#sign-canvas").sketch();
-    })
+        function canvasToImageAppend() {
+                  var canvas = document.getElementById("sign-canvas");
+
+            var ctx=canvas.getContext("2d");
+            //draw a red box
+            ctx.fillStyle="#FF0000";
+            ctx.fillRect(10,10,30,30);
+
+            var url = canvas.toDataURL();
+
+          var newImg = document.createElement("img"); // create img tag
+          newImg.src = url;
+          $('#signatureLink').hide();
+          $('#img')
+     // document.body.appendChild(newImg); // add to end of your document
+ };
 
 
-    function submitClaim() {
-        swal('Invoice has been sent.');
-    }
+function submitClaim() {
+    swal('Invoice has been sent.');
+};
 
-    $("#sign-page").on("touchmove", function(e) {
-        e.preventDefault();
-    })
+$("#sign-page").on("touchmove", function(e) {
+    e.preventDefault();
+});
 
 
-    function scan() {
-        cordova.plugins.barcodeScanner.scan(
-            function (result) {
-                swal("QR Code Scanned");
+function scan() {
+    cordova.plugins.barcodeScanner.scan(
+        function (result) {
+            swal("QR Code Scanned");
                     // "Result: " + result.text + "\n" +
                     // "Format: " + result.format + "\n" +
                     // "Cancelled: " + result.cancelled);
-    },
-    function (error) {
-        swal("Scanning failed: " + error);
-    }
-    )
-    }
+},
+function (error) {
+    swal("Scanning failed: " + error);
+}
+)
+}
 </script>
 </body>
 
