@@ -6,6 +6,47 @@ body {
   font-family: lato !important;
   background-color: #fff;
 }
+@media only screen and (min-width: 320px) {  
+  #treatmentnav {
+    margin-top: 2%;
+    font-size: 125%;
+  }
+  .treatmentText{
+    margin-left: 10%;
+  }
+  .qr-button{
+    width: 95%;
+  }
+  .qr-info {
+    width: 24px;
+    display: inline-flex;
+    margin-right: 10px;
+    float: right;
+    margin-top: 3%;
+  }
+  .SignText {
+    margin-left: 35%;
+  }
+}
+@media only screen and (min-width: 768px) {  
+  #treatmentnav {
+    margin-top: 1%;
+    font-size: 125%;
+  }
+  .treatmentText{
+    margin-left: 24%;
+  }
+  .qr-button{
+    width: 90%;
+  }
+  .qr-info {
+    width: 24px;
+    display: inline-flex;
+    margin-right: 10px;
+    float: right;
+    margin-top: 1%;
+  }
+}
 .dentallink-logo{
   margin-left: 35%;
   margin-top: 5%;
@@ -28,7 +69,7 @@ body {
 .welcome {
   font-size: 24px;
   margin-top: 8px;
-  margin-left: 28%;
+  /*margin-left: 28%;*/
   color: #FFF !important;
   float: left !important;
   text-shadow: none;
@@ -50,7 +91,7 @@ body {
   box-shadow: none;
 }
 .qr-button {
-  width: 100%;
+  /*width: 100%;*/
   border: 0;
   box-shadow: none;
   margin-bottom: 6px;
@@ -268,13 +309,7 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
                                                 font-size: 2rem;
                                                 transition: .3s color; }
 
-                                                .qr-info {
-                                                  width: 24px;
-                                                  display: inline-flex;
-                                                  margin-right: 10px;
-                                                  float: right;
-                                                  margin-top: 4%;
-                                                }
+                                                
                                                 #qr-square {
                                                   width: 70%;
                                                   height: 350px;
@@ -319,7 +354,7 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
                                                   }
                                                 }
                                                 @media screen and (max-width: 1229px) {
-                                                  
+
                                                 }
                                                 @media screen and (max-width: 1206px) {
                                                   #logo-heading {
