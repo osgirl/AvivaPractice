@@ -247,7 +247,7 @@
         <div data-role="page" id="patient-details-page">
             <div class="header" style="text-align: center">
                 <span class="welcome">
-                 <a href="#menu-page">
+                   <a href="#menu-page">
                     <img class="back-arrow" src="img/action_back.png">
                 </a>
                 Treatment Update
@@ -367,7 +367,7 @@
         <div data-role="page" id="teeth-numbers-page">
             <div class="header" style="text-align: center">
                 <span class="welcome">
-                 <a id="teeth-back" href="#patient-details-page">
+                   <a id="teeth-back" href="#patient-details-page">
                     <img class="back-arrow" src="img/action_back.png">
                 </a>
                 Teeth Numbers
@@ -421,10 +421,8 @@
     </div>
 
     <script type="text/javascript">
-        $('#modal1button').click(function(){
-            
-                $( "#modal1buttonOpen" ).append( "<a><strong>Edit</strong></a>" );
-            
+        $('#modal1button').one('click', function(){
+            $( "#modal1buttonOpen" ).append( "<a><strong>Edit</strong></a>" );        
         });
     </script>
 
