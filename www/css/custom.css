@@ -49,6 +49,9 @@ body {
     float: right;
     margin-top: 1%;
   }
+  .modal1buttonOpen, .modal2buttonOpen, .modal3buttonOpen, #treatmentparagraph {
+    font-size: 18px;
+  }
 }
 .dentallink-logo{
   margin-left: 35%;
