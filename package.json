@@ -21,6 +21,7 @@
   "homepage": "https://github.com/SweetPixel/AvivaPractice#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-cordova": "^1.0.0",
     "gulp-live-server": "0.0.27"
   }
 }
