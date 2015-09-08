@@ -297,7 +297,7 @@
                       <hr>
                       Fee : <span class="plan-price">£90</span>
                       <p>Tooth Number : <span class="plan-price">N/A</span></p>
-                      <p>Date of Treatment : <button id="dtpicker">Click here to select a date</button></p>
+                      <p>Date of Treatment : <button id="dtpicker1">Click here to select a date</button></p>
                   </div>
                   <div class="modal-footer">
                       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="modal1button">OK</a>
@@ -314,7 +314,7 @@
                       <hr>
                       Fee : <span class="plan-price">£90</span>
                       <p>Tooth Number : <span class="plan-price">LL8</span></p>
-                      <p>Date of Treatment : <button id="dtpicker">Click here to select a date</button></p>
+                      <p>Date of Treatment : <button id="dtpicker2">Click here to select a date</button></p>
                   </div>
                   <div class="modal-footer">
                       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="modal2button">OK</a>
@@ -331,7 +331,7 @@
                   <hr>
                   Fee : <span class="plan-price">£90</span>
                   <p>Tooth Number : <span class="plan-price">UL8</span></p>
-                  <p>Date of Treatment : <button id="dtpicker">Click here to select a date</button></p>
+                  <p>Date of Treatment : <button id="dtpicker3">Click here to select a date</button></p>
               </div>
               <div class="modal-footer">
                   <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="modal3button">OK</a>
@@ -469,26 +469,76 @@
         swal('An error occured');
     }
 
-    function onSuccess(date) {
+    function onSuccess1(date) {
 
             // to do : change date format to more readable
             var m = moment(date.toString());
 
             console.log(m);
 
-            $('#dtpicker').html(m.format('DD/MM/YYYY'));
+            $('#dtpicker1').html(m.format('DD/MM/YYYY'));
         }
 
-        $('#dtpicker').click(function (e) {
+        function onSuccess2(date) {
+
+                // to do : change date format to more readable
+                var m = moment(date.toString());
+
+                console.log(m);
+
+                $('#dtpicker2').html(m.format('DD/MM/YYYY'));
+            }
+
+            function onSuccess3(date) {
+
+                    // to do : change date format to more readable
+                    var m = moment(date.toString());
+
+                    console.log(m);
+
+                    $('#dtpicker3').html(m.format('DD/MM/YYYY'));
+                }
+
+        $('#dtpicker1').click(function (e) {
             e.preventDefault();
             var options = {
                 date : new Date(),
-                mode: 'date'
+                mode: 'date',
+                x : '100',
+                y : '300'
             };
 
-            datePicker.show(options, onSuccess, onError);
+            datePicker.show(options, onSuccess1, onError);
+
+        });
+
+        $('#dtpicker2').click(function (e) {
+            e.preventDefault();
+            var options = {
+                date : new Date(),
+                mode: 'date',
+                x : '100',
+                y : '300'
+            };
+
+            datePicker.show(options, onSuccess2, onError);
+
+        });
+
+        $('#dtpicker3').click(function (e) {
+            e.preventDefault();
+            var options = {
+                date : new Date(),
+                mode: 'date',
+                x : '100',
+                y : '300'
+            };
+
+            datePicker.show(options, onSuccess3, onError);
 
         })
+
+
 
 
         $(document).ready(function() {
