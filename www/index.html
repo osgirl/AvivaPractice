@@ -29,8 +29,6 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="css/materialize.min.css">
 
-
-    <link rel="stylesheet" href="assets/kalandae/kalandae.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery-ui.js"></script>
 
@@ -40,7 +38,7 @@
 
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
     <link rel="stylesheet" type="text/css" href="assets/jquery-mobile/jquery.mobile-1.4.5.css">
-    <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
 
@@ -107,11 +105,14 @@
 
 
                   <div class="row">
-                    <div class="input-field col s12" style="">
-                        <a class="qr-button waves-effect waves-light btn btn-large" id="btn" href="#menu-page">
-                            <img src="img/svgs/change-password.svg" style="width: 7%;">Sign in
-                        </a>
+                    <div class="center">
+                      <a class="qr-button waves-effect waves-light btn btn-large" id="btn" href="#menu-page">
+                        <i class="fa fa-sign-in fa-4x"></i>  sign in
+                          <!-- <img src="img/svgs/change-password.svg" style="width: 7%;">Sign in -->
+                      </a>
                     </div>
+                    <!-- <div class="input-field col s12" style="">
+                    </div> -->
                 </div>
             </form>
             <div class="row">

@@ -9,7 +9,8 @@
   "dependencies": {
     "pikaday": "*",
     "sweetalert": "*",
-    "moment": "~2.10.6"
+    "moment": "~2.10.6",
+    "fontawesome": "~4.4.0"
   },
   "ignore": [
     "**/.*",
