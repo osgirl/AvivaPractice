@@ -283,7 +283,7 @@
                       <hr>
                       Fee : <span class="plan-price">£90</span>
                       <p>Tooth Number : <span class="plan-price">N/A</span></p>
-                      <p>Date of Treatment : <span id="dtpicker" >Click here to select a date</span></p>
+                      <p>Date of Treatment : <button id="dtpicker">Click here to select a date</button></p>
                   </div>
                   <div class="modal-footer">
                       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="modal1button">OK</a>
@@ -291,7 +291,7 @@
               </div>
 
               <div class="plan-options">
-                <input type="checkbox" name="1" data-role="none"><a href=""><span class="plan-name modal-trigger" data-target="modal2">Panoral X-Ray</span></a> <!-- <span class="plan-price">£90</span> -->
+                <input type="checkbox" name="1" data-role="none"><a href=""><span class="plan-name modal-trigger" data-target="modal2" id="modal2buttonOpen">Panoral X-Ray</span></a> <!-- <span class="plan-price">£90</span> -->
 
                 <!-- Modal Structure -->
                 <div id="modal2" class="modal" style="width: 100%; min-height: 100%;">
@@ -300,15 +300,15 @@
                       <hr>
                       Fee : <span class="plan-price">£90</span>
                       <p>Tooth Number : <span class="plan-price">LL8</span></p>
-                      <p>Date of Treatment <input placeholder="Click here to select a date" type="text" class="auto-kal"></p>
+                      <p>Date of Treatment : <button id="dtpicker">Click here to select a date</button></p>
                   </div>
                   <div class="modal-footer">
-                      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+                      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="modal2button">OK</a>
                   </div>
               </div>
           </div>
           <div class="plan-options">
-            <input type="checkbox" name="1" data-role="none"><a href=""><span class="plan-name modal-trigger" data-target="modal3">Hygiene</span></a> <!-- <span class="plan-price">£85</span> -->
+            <input type="checkbox" name="1" data-role="none"><a href=""><span class="plan-name modal-trigger" data-target="modal3" id="modal3buttonOpen">Hygiene</span></a> <!-- <span class="plan-price">£85</span> -->
 
             <!-- Modal Structure -->
             <div id="modal3" class="modal" style="width: 100%; min-height: 100%;">
@@ -317,10 +317,10 @@
                   <hr>
                   Fee : <span class="plan-price">£90</span>
                   <p>Tooth Number : <span class="plan-price">UL8</span></p>
-                  <p>Date of Treatment <input placeholder="Click here to select a date" type="text" class="auto-kal"></p>
+                  <p>Date of Treatment : <button id="dtpicker">Click here to select a date</button></p>
               </div>
               <div class="modal-footer">
-                  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+                  <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="modal3button">OK</a>
               </div>
           </div>
       </div>
@@ -422,7 +422,13 @@
 
     <script type="text/javascript">
         $('#modal1button').one('click', function(){
-            $( "#modal1buttonOpen" ).append( "<a><strong>Edit</strong></a>" );        
+            $( "#modal1buttonOpen" ).append( "<a style='margin-left: 5%;'><strong>Edit</strong></a>" );
+        });
+        $('#modal2button').one('click', function(){
+            $( "#modal2buttonOpen" ).append( "<a style='margin-left: 5%;'><strong>Edit</strong></a>" );
+        });
+        $('#modal3button').one('click', function(){
+            $( "#modal3buttonOpen" ).append( "<a style='margin-left: 5%;'><strong>Edit</strong></a>" );
         });
     </script>
 
