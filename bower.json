@@ -6,10 +6,11 @@
     "Muhammad Sayyam <sayyam@sweetpixelstudios.com>"
   ],
   "license": "MIT",
-  "dependencies" : {
-      "pikaday": "*",
-      "sweetalert": "*"
-    },
+  "dependencies": {
+    "pikaday": "*",
+    "sweetalert": "*",
+    "moment": "~2.10.6"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
